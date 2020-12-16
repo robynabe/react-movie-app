@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+// partial imports
+@use './partials/header';
+@use './partials/main';
+@use './partials/footer';
+
+// variable import
+@use './variables/variables.scss';
