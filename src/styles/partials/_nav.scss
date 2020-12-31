@@ -1,0 +1,20 @@
+// class names //
+.nav-bar {
+  display: none;
+}
+
+// hover states //
+a:hover {
+  text-decoration: underline;
+}
+
+// MEDIA QUERIES //
+@media (min-width: 400px) {
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-bar {
+    display: flex;
+  }
+}

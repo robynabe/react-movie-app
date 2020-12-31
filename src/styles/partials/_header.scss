@@ -1,16 +1,13 @@
-a {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  color: teal;
-}
-li {
-  list-style: none;
+form {
+  display: block;
+  margin: 0 auto;
 }
 
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+// class names //
+
+// MEDIA QUERIES //
+@media (min-width: 400px) {
+  .search-bar {
+    display: flex;
+  }
 }

@@ -3,7 +3,8 @@
 function Footer() {
   return (
     <footer>
-      <p>This is the footer</p>
+      <p>&copy; 2020 TWD BCIT Porgram</p>
+      <p>Designed and coded by: Olivia Feildon • Seraphina White • Robyn Abe </p>
     </footer>
   );
 }

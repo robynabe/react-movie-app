@@ -5,8 +5,19 @@ import Nav from './Nav';
 function Header() {
   return (
     <header>
-      <h1><Link to={'/'}>Movie App</Link></h1>
-      <Nav />
+      <div className='nav-wrapper'>
+        <h1><Link to={'/'}>CINEFLIX</Link></h1>
+        <Nav />
+      </div>
+      <div className='search-bar'>
+        <form action='/'>
+          <input 	type="text" 
+				          name="search" 
+				          id="search" 
+				          placeholder="search flix..." />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
     </header>
   );
 }
