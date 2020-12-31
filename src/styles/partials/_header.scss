@@ -1,13 +1,33 @@
+header {
+  position: relative;
+}
 form {
   display: block;
-  margin: 0 auto;
+  margin: 5% auto 0;
 }
 
 // class names //
 
 // MEDIA QUERIES //
 @media (min-width: 400px) {
+  .img-banner {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    z-index: -99;
+  }
   .search-bar {
     display: flex;
+    padding: 15px;
+  }
+  #search {
+    padding: 8px 15px;
+    margin-right: 10px;
+    width: 300px;
+    border-radius: 30px;
+  }
+  #submit {
+    padding: 8px 15px;
+    border-radius: 30px;
   }
 }

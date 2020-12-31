@@ -1,0 +1,27 @@
+main {
+  margin-top: 25%;
+  height: 100vh;
+}
+
+// class names //
+.movies {
+  display: block;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.movie-info {
+  display: block;
+  border: black solid 2px;
+  padding: 20px;
+  margin: 10px;
+}
+
+@media (min-width: 400px) {
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .movie-info {
+    width: 380px;
+  }
+}

@@ -5,6 +5,7 @@ import Nav from './Nav';
 function Header() {
   return (
     <header>
+      <img className="img-banner" src="../images/cinema-felix-mooneeram-unsplash.jpg" alt="movie theatre seats"/>
       <div className='nav-wrapper'>
         <h1><Link to={'/'}>CINEFLIX</Link></h1>
         <Nav />
@@ -15,7 +16,7 @@ function Header() {
 				          name="search" 
 				          id="search" 
 				          placeholder="search flix..." />
-          <input type="submit" value="Search" />
+          <input type="submit" id="submit" value="Search" />
         </form>
       </div>
     </header>
