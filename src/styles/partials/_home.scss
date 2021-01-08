@@ -1,27 +1,57 @@
 main {
   margin-top: 25%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 // class names //
-.movies {
-  display: block;
+.featured-movies {
   max-width: 1400px;
+  display: block;
   margin: 0 auto;
 }
+.featured-movies a {
+  color: #3326df;
+}
+.sort-movies {
+  margin-left: 15px;
+}
 .movie-info {
-  display: block;
-  border: black solid 2px;
-  padding: 20px;
-  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px rgba(67, 67, 67, 0.03), 0 6px 5px rgba(67, 67, 67, 0.05),
+    0 12px 10px rgba(67, 67, 67, 0.06), 0 22px 17px rgba(67, 67, 67, 0.07),
+    0 30px 28px rgba(67, 67, 67, 0.08), 0 90px 70px rgba(67, 67, 67, 0.1);
+  width: 380px;
+}
+.movie-image {
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+}
+.overview {
+  margin: 15px;
+}
+.fa-star {
+  color: #fec810;
+}
+.fa-heart {
+  float: right;
 }
 
-@media (min-width: 400px) {
-  .movies {
+// id's //
+#sort-by {
+  padding: 8px 15px;
+  margin-left: 5px;
+  border-radius: 6px;
+  border: none;
+}
+
+// DESKTOP VIEW //
+@media (min-width: 350px) {
+  .featured-movies {
     display: flex;
     flex-wrap: wrap;
-  }
-  .movie-info {
-    width: 380px;
   }
 }
