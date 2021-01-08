@@ -1,5 +1,4 @@
 // HOME PAGE //
-
 function Home() {
   return (
     <main>
@@ -19,7 +18,7 @@ function Home() {
               <h4>Overview</h4>
               <p>Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, 
                 he suddenly gets into an accident that separates his soul... <a href="/">more info</a></p>
-                <i class="far fa-heart"></i>
+                  <i class="far fa-heart"></i>
             </div>
           </div>
           <div className="movie-info">
