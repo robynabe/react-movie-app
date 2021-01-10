@@ -1,4 +1,4 @@
-import Home from '../components/Home';
+//import Home from '../components/Home';
 
 const createFavouriteStorage = document.getElementsByClassName('favourite');
 const output = document.getElementById('output');
