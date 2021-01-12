@@ -1,5 +1,7 @@
 // HOME PAGE //
 
+import { getElementError } from "@testing-library/react";
+
 function Home() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c';
   const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=soul`;
@@ -15,6 +17,7 @@ function Home() {
   let initialMovieArray = [];
   initialMovieArray = JSON.stringify(initialMovieArray)
   let favouriteMovies = localStorage.getItem('favMovies');
+  let movieObj = document.getElementsByClassName('movie-info');
 
   function addToFavourites(event){
     event.preventDefault();
