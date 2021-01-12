@@ -1,5 +1,18 @@
 // HOME PAGE //
+
 function Home() {
+  const API_KEY = '80b08b43125772f29e329b06bba72a9c';
+  const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=soul`;
+
+  const fetchMovieTitle = async () => {
+    const results = await fetch(API_URL);
+    let data = await results.json();
+    console.log(data.results); // Gives you all the info about every movie that starts with Soul
+  }
+
+  fetchMovieTitle();
+
+
   return (
     <main>
         <form className="sort-movies">

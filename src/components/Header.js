@@ -5,7 +5,7 @@ import Nav from './Nav';
 function Header() {
   return (
     <header>
-      <img className="img-banner" src="../images/cinema-felix-mooneeram-unsplash.jpg" alt="movie theatre seats"/>
+      <img className="img-banner" src="/images/cinema-felix-mooneeram-unsplash.jpg"/>
       <div className='nav-wrapper'>
         <h1><Link to={'/'}>CINEFLIX</Link></h1>
         <Nav />
