@@ -2,7 +2,7 @@
 
 const createFavouriteStorage = document.getElementsByClassName('favourite');
 const output = document.getElementById('output');
-const favouriteMovie = localStorage.getItem('favMovie');
+
 
 if(!favouriteMovie){
     output.innerHTML = "No favourites set";
