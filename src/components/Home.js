@@ -1,23 +1,36 @@
 // HOME PAGE //
-
-import { getElementError } from "@testing-library/react";
+import { useState } from 'react';
+//import { getElementError } from "@testing-library/react"; @Olivia, did you add this? Robyn and I were trying to figure out what this was! 
 
 function Home() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c';
-  const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=soul`;
-
-  const fetchMovieTitle = async () => {
-    const results = await fetch(API_URL);
-    let data = await results.json();
-    console.log(data.results); // Gives you all the info about every movie that starts with Soul
+  //const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+  
+  const [popularMovies, setPopularMovies] = useState(null);
+  const fetchPopularMovies = async () =>{
+    const popular_movie_data = await fetch(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+    );
+    const popular_movie_response = await popular_movie_data.json();
+    setPopularMovies(popular_movie_response.results);
+    //console.log(popularMovies); uncomment this when you want it to run but beware - it will make your computer freeze
   }
+  fetchPopularMovies();
 
-  fetchMovieTitle();
+  // const fetchMovieTitle = async () => {
+  //   const results = await fetch(API_URL);
+  //   let data = await results.json();
+  //   console.log(data.results); // Gives you all the info about every movie that starts with Soul
+  // }
+
+  // fetchMovieTitle();
 
   let initialMovieArray = [];
-  initialMovieArray = JSON.stringify(initialMovieArray)
-  let favouriteMovies = localStorage.getItem('favMovies');
-  let movieObj = document.getElementsByClassName('movie-info');
+  //let favouriteMovies = localStorage.getItem('favMovies');
+  const movieObj = [];
+  movieObj.title = 'Soul';
+  movieObj.poster = '...';
+  initialMovieArray = JSON.stringify(movieObj)
 
   function addToFavourites(event){
     event.preventDefault();
@@ -42,7 +55,7 @@ function Home() {
         </form>
         <section className="featured-movies">
           <div className="movie-info">
-            <img className="movie-image" src="../images/soul-image-placeholder.jpg"/>
+            <img className="movie-image" id='soul-image' src="../images/soul-image-placeholder.jpg"/>
             <div className="overview">
               <h3>Soul</h3>
               <p><i className="fas fa-star"></i> 4.0</p>
