@@ -1,5 +1,5 @@
 // HOME PAGE //
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 //import { getElementError } from "@testing-library/react"; @Olivia, did you add this? Robyn and I were trying to figure out what this was! 
 
 function Home() {
@@ -13,9 +13,9 @@ function Home() {
     );
     const popular_movie_response = await popular_movie_data.json();
     setPopularMovies(popular_movie_response.results);
-    //console.log(popularMovies); uncomment this when you want it to run but beware - it will make your computer freeze
+    console.log(popular_movie_response.results);
   }
-  fetchPopularMovies();
+  //fetchPopularMovies();
 
   // const fetchMovieTitle = async () => {
   //   const results = await fetch(API_URL);
@@ -24,6 +24,9 @@ function Home() {
   // }
 
   // fetchMovieTitle();
+  useEffect(() => {
+    fetchPopularMovies();
+  } , [] )
 
   let initialMovieArray = [];
   //let favouriteMovies = localStorage.getItem('favMovies');
