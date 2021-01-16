@@ -1,0 +1,23 @@
+main{
+    background-color: black;
+}
+
+.fav-wrapper{
+    padding-top: 150px ;
+    text-align: center;
+}
+#main-title{
+
+    text-transform: uppercase;
+}
+h1,h2{
+
+    color: white;
+}
+
+@media (min-width: 400px) {
+    .movie-section {
+        padding-top: 50px ;
+        max-width: 400px;
+    }
+  }
