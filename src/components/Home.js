@@ -46,6 +46,7 @@ function Home() {
     //localStorage.setItem('favMovies', favMovies);
   }
 
+
   
   return (
     <main>
@@ -58,13 +59,13 @@ function Home() {
         </form>
         <section className="featured-movies">
           <div className="movie-info">
-            <img className="movie-image" id='soul-image' src="../images/soul-image-placeholder.jpg"/>
+            <img className="movie-image" src="../images/soul-image-placeholder.jpg"/>
             <div className="overview">
               <h3>Soul</h3>
               <p><i className="fas fa-star"></i> 4.0</p>
               <h4>Overview</h4>
               <p>Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, 
-                he suddenly gets into an accident that separates his soul... <a href="/">more info</a></p>
+                he suddenly... <a href="/">more info</a></p>
                   <button className="far fa-heart favourite" onClick={addToFavourites}></button>
             </div>
           </div>
@@ -75,7 +76,7 @@ function Home() {
               <p><i className="fas fa-star"></i> 5.0</p>
               <h4>Overview</h4>
               <p>Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s and finds a formidable 
-                foe by the name of the Cheetah... <a href="/">more info</a></p>
+                foe by... <a href="/">more info</a></p>
                 <button className="far fa-heart favourite" onClick={addToFavourites}></button>
             </div>
           </div>
@@ -86,7 +87,7 @@ function Home() {
               <p><i className="fas fa-star"></i> 3.0</p>
               <h4>Overview</h4>
               <p>Cosmoball is a mesmerizing intergalactic game of future played between humans and aliens at the giant extraterrestrial 
-                ship hovering in the sky over Earth... <a href="/">more info</a></p>
+                ship... <a href="/">more info</a></p>
                 <button className="far fa-heart favourite" onClick={addToFavourites}></button>
             </div>
           </div>
