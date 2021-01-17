@@ -1,10 +1,16 @@
 // FOOTER //
+import React from "react";
 
 function Footer() {
+  const getYear = () => {
+    const year = new Date();
+    return year.getFullYear();
+  }
   return (
     <footer>
-      <p>For educational use only &copy; 2020</p>
-      <p>Designed and coded by: Olivia Feildon • Seraphina White • Robyn Abe </p>
+      <p>For educational use only &copy; {getYear()}</p>
+      <p>Designed and coded by: 
+        <a href="https://github.com/omcdanielfeilden">Olivia Feildon</a> • <a href="https://github.com/seraphinawhite">Seraphina White</a> • <a href="https://github.com/robynabe">Robyn Abe</a> </p>
     </footer>
   );
 }
