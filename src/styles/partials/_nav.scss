@@ -1,15 +1,18 @@
 a {
   color: #ffffff;
 }
+
+// class names //
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .nav-bar {
   display: none;
 }
 .hamburger-btn {
-  display: block;
-}
-// class names //
-.nav-bar {
-  display: none;
+  display: inline-block;
+  margin: 15px 10px;
 }
 
 // hover states //
