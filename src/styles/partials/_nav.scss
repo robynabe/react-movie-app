@@ -1,6 +1,12 @@
 a {
   color: #ffffff;
 }
+.nav-bar {
+  display: none;
+}
+.hamburger-btn {
+  display: block;
+}
 // class names //
 .nav-bar {
   display: none;
@@ -12,7 +18,13 @@ a:hover {
 }
 
 // MEDIA QUERIES //
-@media (min-width: 400px) {
+@media (min-width: 520px) {
+  .nav-bar {
+    display: block;
+  }
+  .hamburger-btn {
+    display: none;
+  }
   .nav-wrapper {
     display: flex;
     justify-content: space-between;

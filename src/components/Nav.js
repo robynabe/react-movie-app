@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import Hamburger from '../utilities/Hamburger';
 
 function Nav() {
   return (
     <nav>
+        <Hamburger />
         <ul className="nav-bar">
             <li>
                 <NavLink to={'/'}>Home</NavLink>
