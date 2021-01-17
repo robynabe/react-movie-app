@@ -15,10 +15,10 @@ export default class Hamburger extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="mobile-nav">
                 <button className="hamburger-btn" onClick={this.toggle}><i class="fas fa-bars"></i></button>
                 {this.state.show && (
-                    <ul className="mobile-nav">
+                    <ul>
                         <li><NavLink to={'/'}>Home</NavLink></li>
                         <li><NavLink to={'/about'}>About</NavLink></li>
                         <li><NavLink to={'/favourites'}>Favourites</NavLink></li>
