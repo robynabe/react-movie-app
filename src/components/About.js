@@ -3,7 +3,8 @@
 function About() {
   return (
     <main className="about-wrapper">
-      <button>Return</button>
+     <i class="arrow left"></i>
+      <button id="return-home-btn">Return</button>
       <section className="welcome-message">
         <h1>Welcome!</h1>
         <h2>About Cineflix</h2>
