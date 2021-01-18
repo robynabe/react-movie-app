@@ -1,11 +1,14 @@
 // ABOUT PAGE //
+import { NavLink } from 'react-router-dom';
 
 function About() {
   return (
     <main className="about-wrapper">
-     <i class="arrow left"></i>
-      <button id="return-home-btn">Return</button>
-      <section className="welcome-message">
+      <button className="return-home-btn">
+        <NavLink to={'/'}><i class="fas fa-step-backward"></i></NavLink>
+      </button>
+      <div className="about-container">
+        <section className="welcome-message">
         <h1>Welcome!</h1>
         <h2>About Cineflix</h2>
       </section>
@@ -16,6 +19,7 @@ function About() {
         </p>
         <img className="film-reel-icon" src="../images/icons8-film-reel-64.png" />
       </section>
+      </div>
     </main>
   );
 }

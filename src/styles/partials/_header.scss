@@ -5,11 +5,14 @@ form {
   display: block;
   margin: 5% auto 0;
 }
+header h1 {
+  margin: 10px;
+}
 
 // class names //
 
 // MEDIA QUERIES //
-@media (min-width: 400px) {
+@media (min-width: 380px) {
   .img-banner {
     width: 100%;
     position: absolute;
