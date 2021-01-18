@@ -7,7 +7,7 @@ main {
 .featured-movies {
   display: block;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1600px;
 }
 .featured-movies a {
   color: #3326df;
@@ -62,5 +62,7 @@ main {
   .featured-movies {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
