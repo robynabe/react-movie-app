@@ -40,7 +40,6 @@ function Home() {
     //localStorage.setItem('favMovies', favMovies);
   }*/
 
-  
   return (
     <main>
         <form className="sort-movies">

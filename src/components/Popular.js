@@ -1,13 +1,12 @@
 import React from 'react';
 
 const MovieList = (props) => {
-    let imgUrl = 'https://image.tmdb.org/t/p/w180/';
 
     return (
         <div className="featured-movies">
             {props.movies.map((movie, index) => (
-                <div className="movie-info">
-                    <img className="movie-image" src={movie.poster_path}/>
+                <div key={index} className="movie-info">
+                    <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
                     <div className="overview">
                         <h3>{movie.title}</h3>
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
