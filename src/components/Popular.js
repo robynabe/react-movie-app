@@ -12,8 +12,8 @@ const MovieList = (props) => {
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                         <h4>Overview</h4>
                         <p>{movie.overview} <a href="/">more info</a></p>
-                        <button onClick={()=> props.handleFavouritesClick(movie)}>
-                            <FavouriteComponent/>
+                        <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
+                            <FavouriteComponent />
                         </button>
                         {/* <button onClick={()=> props.handleFavouritesClick(movie)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">

@@ -1,6 +1,9 @@
 // FAVOURITES PAGE //
 import '../styles/partials/_favourites.scss';
 import { NavLink } from 'react-router-dom';
+import MovieList from './Popular';
+import AddFavouriteMovie from './Home';
+
 
 function Favourites() {
   return (
@@ -31,6 +34,9 @@ function Favourites() {
             </div>
           </section>
         </div> */}
+            <div>
+             <MovieList movies={favourites} handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites}/>
+          </div>
     </main>
     
   );
