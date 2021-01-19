@@ -5,6 +5,7 @@ import AddFavourites from './AddFavourites';
 
 function Home() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c';
+  const [favourites, setFavourites] = useState([]);
 
   const [movies, setMovies] = useState([]);
 
@@ -22,6 +23,11 @@ function Home() {
   useEffect(() => {
       getMovieRequest();
    }, []);
+
+   const AddFavouriteMovie = (movie) => {
+     const newFavouriteList = [...favourites,movie]
+     setFavourites(newFavouriteList);
+   }
 
   /*let initialMovieArray = [];
   //let favouriteMovies = localStorage.getItem('favMovies');
@@ -51,7 +57,7 @@ function Home() {
           </select>
         </form>
           <div>
-            <MovieList movies={movies} />
+            <MovieList movies={movies} handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites}/>
           </div>
     </main>
   );
