@@ -41,14 +41,14 @@
   font-size: 30px;
 }
 
-// The arrow is red for now so it's easier to see when switching background colors. Will change to either black or white
-.arrow {
-  border: solid red;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  margin: 10px;
-}
+
+// .arrow {
+//   border: solid red;
+//   border-width: 0 3px 3px 0;
+//   display: inline-block;
+//   padding: 3px;
+//   margin: 10px;
+// }
 
 .left {
   transform: rotate(135deg);
