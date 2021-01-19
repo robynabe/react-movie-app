@@ -1,17 +1,22 @@
 // FAVOURITES PAGE //
 import '../styles/partials/_favourites.scss';
+import { NavLink } from 'react-router-dom';
 
 function Favourites() {
   return (
     <main>
         {/* <h2 id="fav-title">This is the favourites page</h2> */}
-        <div class="fav-wrapper">
-          <h1 id="main-title">Oops</h1>
-          <h2 id="output">There are no movies currently saved in your favourites. Please return to the home page to add a favourite movie!</h2>
-          {/* <img src="../images/popcorn.jpg" alt="Popcorn"></img> */}
-          {/* <button>Return</button> */}
+        <div className="fav-wrapper">
+          <button className="return-home-btn">
+            <NavLink to={'/'}><i class="fas fa-step-backward"></i></NavLink>
+          </button>
+            <div className="fav-container">
+              <h1 id="main-title">Oh no!</h1>
+              <h2 id="output">There are no movies currently saved in your favourites. Please return to the home page to add a favourite movie!</h2>
+              <img src="../images/popcorn.png" alt="Popcorn" className="popcorn"></img>
+            </div>
         </div>
-        <div>
+        {/* <div>
         <section className="movie-section">
           <div className="movie-info">
               <img className="movie-image" id='soul-image' src="../images/soul-image-placeholder.jpg"/>
@@ -25,7 +30,7 @@ function Favourites() {
               </div>
             </div>
           </section>
-        </div>
+        </div> */}
     </main>
     
   );
