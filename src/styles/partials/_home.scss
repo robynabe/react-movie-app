@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
 main {
   margin-top: 12%;
@@ -10,11 +10,10 @@ main {
   display: block;
   margin: 0 auto;
   max-width: 1600px;
-  a {
-    color: #3326df;
-  }
 }
-
+.featured-movies a {
+  color: #3326df;
+}
 .sort-movies {
   margin-left: 15px;
 }
@@ -41,7 +40,7 @@ main {
 }
 .overview {
   margin: 15px;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 300;
 }
 .fa-star {
