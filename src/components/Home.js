@@ -1,6 +1,7 @@
 // HOME PAGE //
 import { useState, useEffect } from 'react';
 import MovieList from './Popular';
+import AddFavourites from './AddFavourites';
 
 function Home() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c';
@@ -49,7 +50,9 @@ function Home() {
             <option value="top-rated">Top Rated</option>
           </select>
         </form>
+          <div>
             <MovieList movies={movies} />
+          </div>
     </main>
   );
 }

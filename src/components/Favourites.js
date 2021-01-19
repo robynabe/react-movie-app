@@ -6,7 +6,7 @@ function Favourites() {
   return (
     <main>
         {/* <h2 id="fav-title">This is the favourites page</h2> */}
-        <div className="fav-wrapper">
+        {/* <div className="fav-wrapper">
           <button className="return-home-btn">
             <NavLink to={'/'}><i class="fas fa-step-backward"></i></NavLink>
           </button>
@@ -16,7 +16,7 @@ function Favourites() {
               <img src="../images/popcorn.png" alt="Popcorn" className="popcorn"></img>
             </div>
         </div>
-        {/* <div>
+        <div>
         <section className="movie-section">
           <div className="movie-info">
               <img className="movie-image" id='soul-image' src="../images/soul-image-placeholder.jpg"/>
