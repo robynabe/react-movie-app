@@ -6,8 +6,8 @@ import RemoveFavourites from './RemoveFavourites';
 
 function Home() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c';
-  const [favourites, setFavourites] = useState([]);
 
+  const [favourites, setFavourites] = useState([]);
   const [movies, setMovies] = useState([]);
 
   const getMovieRequest = async () => {
@@ -25,26 +25,26 @@ function Home() {
       getMovieRequest();
    }, []);
 
-useEffect(() => {
-  const movieFavourites = JSON.parse(
-    localStorage.getItem('favourites')
-  );
-  setFavourites(movieFavourites);
-}, []);
+  /*  useEffect(() => {
+     const movieFavourites = JSON.parse(
+      localStorage.getItem('favourites')
+      );
+      setFavourites(movieFavourites);
+   }, []); */
 
   const saveToLocalStorage = (items) =>{
     localStorage.setItem('favourites', JSON.stringify(items))
   }
 
    const AddFavouriteMovie = (movie) => {
-     const newFavouriteList = [...favourites,movie]
+     const newFavouriteList = [...favourites, movie]
      setFavourites(newFavouriteList);
      saveToLocalStorage(newFavouriteList);
    }
 
-   const removeFavouriteMovie =(movie) =>{
+   const removeFavouriteMovie = (movie) => {
       const newFavouriteList = favourites.filter(
-        (favourite) => favourite.movie_id !== movie.movie_id
+        (favourite) => favourite.movie_id !== movie.movie_id // movie_id taken directly from the DB
       );
       setFavourites(newFavouriteList);
       saveToLocalStorage(newFavouriteList);
@@ -57,6 +57,8 @@ useEffect(() => {
           <select name="sort-by" id="sort-by">			
 				    <option value="Popular">Popular</option>
             <option value="top-rated">Top Rated</option>
+            <option value="top-rated">Now Playing</option>
+            <option value="top-rated">Coming Soon</option>
           </select>
         </form>
           <div>
