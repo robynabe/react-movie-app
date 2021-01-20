@@ -1,5 +1,5 @@
 // INDIVIDUAL PAGE //
-import '../styles/partials/_individual.scss';
+import { NavLink } from 'react-router-dom';
 
 function Individual() {
 
@@ -11,7 +11,7 @@ function Individual() {
             </button>
             <div class="movie-poster-individual">
             <img className="movie-image" src="../images/ww84-image-placeholder.jpg"/>
-            <button className="far fa-heart favourite" onClick={addToFavourites}></button>
+            <button className="far fa-heart favourite"></button>
                 <div class="movie-info-individual">
                 <h2>Wonder Woman 1984 (2020)</h2>
                 <h3>Release date: 12/25/2020</h3>
