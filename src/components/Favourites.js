@@ -2,7 +2,7 @@
 import '../styles/partials/_favourites.scss';
 import { NavLink } from 'react-router-dom';
 import MovieList from './Popular';
-import AddFavouriteMovie from './Home';
+//import AddFavouriteMovie from './Home';
 
 
 function Favourites() {
@@ -34,9 +34,9 @@ function Favourites() {
             </div>
           </section>
         </div> */}
-            <div>
+            {/* <div>
              <MovieList movies={favourites} handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites}/>
-          </div>
+          </div> */}
     </main>
     
   );

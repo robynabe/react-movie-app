@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import MovieList from './Popular';
 import AddFavourites from './AddFavourites';
+import RemoveFavourites from './RemoveFavourites';
 
 function Home() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c';
@@ -24,28 +25,30 @@ function Home() {
       getMovieRequest();
    }, []);
 
+useEffect(() => {
+  const movieFavourites = JSON.parse(
+    localStorage.getItem('favourites')
+  );
+  setFavourites(movieFavourites);
+}, []);
+
+  const saveToLocalStorage = (items) =>{
+    localStorage.setItem('favourites', JSON.stringify(items))
+  }
+
    const AddFavouriteMovie = (movie) => {
      const newFavouriteList = [...favourites,movie]
      setFavourites(newFavouriteList);
+     saveToLocalStorage(newFavouriteList);
    }
 
-  /*let initialMovieArray = [];
-  //let favouriteMovies = localStorage.getItem('favMovies');
-  const movieObj = [];
-  movieObj.title = 'Soul';
-  movieObj.poster = '...';
-  initialMovieArray = JSON.stringify(movieObj)
-
-  function addToFavourites(event){
-    event.preventDefault();
-    localStorage.setItem( 'favMovies', initialMovieArray ); 
-    //let favMovies = localStorage.getItem('favMovies');
-    //prompt ('Add Favourite Movie');
-    //favMovies = JSON.parse(favMovies);
-  
-    //favMovies = JSON.stringify(favMovies);
-    //localStorage.setItem('favMovies', favMovies);
-  }*/
+   const removeFavouriteMovie =(movie) =>{
+      const newFavouriteList = favourites.filter(
+        (favourite) => favourite.movie_id !== movie.movie_id
+      );
+      setFavourites(newFavouriteList);
+      saveToLocalStorage(newFavouriteList);
+   }
 
   return (
     <main>
@@ -56,6 +59,10 @@ function Home() {
             <option value="top-rated">Top Rated</option>
           </select>
         </form>
+          <div>
+            <h1>Favourites</h1>
+            <MovieList movies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
+          </div>
           <div>
             <MovieList movies={movies} handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites}/>
           </div>
