@@ -25,14 +25,14 @@ function Home() {
       getMovieRequest();
    }, []);
 
-// useEffect(() => {
-//   const movieFavourites = JSON.parse(
-//     localStorage.getItem('favourites')
-//   );
-//   setFavourites(movieFavourites);
-// }, []);
+  // useEffect(() => {
+  //   const movieFavourites = JSON.parse(
+  //     localStorage.getItem('favourites')
+  //   );
+  //   setFavourites(movieFavourites);
+  // }, []);
 
-  const saveToLocalStorage = (items) =>{
+  const saveToLocalStorage = (items) => {
     localStorage.setItem('favourites', JSON.stringify(items))
   }
 
