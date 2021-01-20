@@ -25,12 +25,12 @@ function Home() {
       getMovieRequest();
    }, []);
 
-useEffect(() => {
-  const movieFavourites = JSON.parse(
-    localStorage.getItem('favourites')
-  );
-  setFavourites(movieFavourites);
-}, []);
+// useEffect(() => {
+//   const movieFavourites = JSON.parse(
+//     localStorage.getItem('favourites')
+//   );
+//   setFavourites(movieFavourites);
+// }, []);
 
   const saveToLocalStorage = (items) =>{
     localStorage.setItem('favourites', JSON.stringify(items))
@@ -64,6 +64,7 @@ useEffect(() => {
             <MovieList movies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
           </div>
           <div>
+            <h1>Popular Movies</h1>
             <MovieList movies={movies} handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites}/>
           </div>
     </main>
