@@ -5,7 +5,7 @@ import AddFavourites from './AddFavourites';
 import RemoveFavourites from './RemoveFavourites';
 
 function Home() {
-  const API_KEY = '80b08b43125772f29e329b06bba72a9c';
+  const API_KEY = '80b08b43125772f29e329b06bba72a9c'; // can't get the variable to work
 
   const [favourites, setFavourites] = useState([]);
   const [movies, setMovies] = useState([]);
