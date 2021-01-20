@@ -8,18 +8,13 @@ const MovieList = (props) => {
                 <div key={index} className="movie-info">
                     <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
                     <div className="overview">
-                        <h3>{movie.title}</h3>
+                        <h5>{movie.title}</h5>
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                        <h4>Overview</h4>
+                        <h6>Overview</h6>
                         <p>{movie.overview} <a href="/">more info</a></p>
                         <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
                             <FavouriteComponent />
                         </button>
-                        {/* <button onClick={()=> props.handleFavouritesClick(movie)}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
-                                <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                            </svg>
-                        </button> */}
                     </div>
                 </div>
             ))}
