@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Individual from './Individual';
 
 const MovieList = (props) => {
     const FavouriteComponent = props.favouriteComponent;
@@ -12,7 +13,7 @@ const MovieList = (props) => {
                         <h5>{movie.title}</h5>
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                         <h6>Overview</h6>
-                        <p>{movie.overview} <NavLink to={'/individual'}>More info</NavLink></p>
+                        <p>{movie.overview} <Link to={`/individual/${movie.id}`}>More info</Link></p>
                         <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
                             <FavouriteComponent />
                         </button>

@@ -18,7 +18,7 @@ function AppRouter() {
             <Route path={'/'} exact><Home /></Route>
             <Route path={'/favourites'}><Favourites /></Route> 
             <Route path={'/about'}><About /></Route>
-            <Route path={'/individual'}><Individual /></Route>
+            <Route path={'/individual/:id'}><Individual /></Route>
           </Switch>
         <Footer/>
       </div>
