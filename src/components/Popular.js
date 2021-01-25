@@ -5,7 +5,7 @@ const MovieList = (props) => {
     const FavouriteComponent = props.favouriteComponent;
     return (
         <div className="featured-movies">
-            {props.movies.map((movie, index) => (
+            {props.popularMovies.map((movie, index) => (
                 <div key={index} className="movie-info">
                     <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
                     <div className="overview">

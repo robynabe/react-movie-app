@@ -7,12 +7,12 @@ function Individual() {
 
         <main>
             <button className="return-home-btn">
-            <NavLink to={'/'}><i class="fas fa-step-backward"></i></NavLink>
+            <NavLink to={'/'}><i className="fas fa-step-backward"></i></NavLink>
             </button>
-            <div class="movie-poster-individual">
+            <div className="movie-poster-individual">
             <img className="movie-image" src="../images/ww84-image-placeholder.jpg"/>
             <button className="far fa-heart favourite"></button>
-                <div class="movie-info-individual">
+                <div className="movie-info-individual">
                 <h2>Wonder Woman 1984 (2020)</h2>
                 <h3>Release date: 12/25/2020</h3>
                 <h3>Fantasy, Action, Adventure</h3>

@@ -11,9 +11,7 @@ main {
   margin: 0 auto;
   max-width: 1600px;
 }
-.featured-movies a {
-  color: #3326df;
-}
+
 .sort-movies {
   margin-left: 15px;
 }
@@ -45,6 +43,15 @@ main {
 }
 .fa-star {
   color: #fec810;
+}
+
+.select-btn {
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: rgba(75, 75, 75, 0.673);
+  margin: 20px;
+  padding: 10px 20px;
 }
 
 // id's //

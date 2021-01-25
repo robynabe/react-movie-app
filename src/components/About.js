@@ -5,7 +5,7 @@ function About() {
   return (
     <main className="about-wrapper">
       <button className="return-home-btn">
-        <NavLink to={'/'}><i class="fas fa-step-backward"></i></NavLink>
+        <NavLink to={'/'}><i className="fas fa-step-backward"></i></NavLink>
       </button>
       <div className="about-container">
         <section className="welcome-message">

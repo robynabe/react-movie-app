@@ -3,28 +3,30 @@ import { useState, useEffect } from 'react';
 import MovieList from './Popular';
 import AddFavourites from './AddFavourites';
 import RemoveFavourites from './RemoveFavourites';
+import SubNav from './SubNav';
 
 function Home() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c'; // can't get the variable to work
 
   const [favourites, setFavourites] = useState([]);
-  const [movies, setMovies] = useState([]);
+  const [popularMovies, setPopularMovies] = useState([]);
 
-  const getMovieRequest = async () => {
-    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+  const getPopularMovieRequest = async () => {
+    const popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
-    const response = await fetch(url);
+    const response = await fetch(popularUrl);
     const responseJson = await response.json();
 
     console.log(responseJson);
-    setMovies(responseJson.results);
+    setPopularMovies(responseJson.results);
     }
 
   // Request will get called only when the page loads
   useEffect(() => {
-      getMovieRequest();
+      getPopularMovieRequest();
    }, []);
 
+  // can't get the local storage to work - favourites disappear on refresh
   // useEffect(() => {
   //   const movieFavourites = JSON.parse(
   //     localStorage.getItem('favourites')
@@ -52,22 +54,14 @@ function Home() {
 
   return (
     <main>
-        <form className="sort-movies">
-          <label htmlFor="sort-by">Sort By:</label>
-          <select name="sort-by" id="sort-by">			
-				    <option value="Popular">Popular</option>
-            <option value="top-rated">Top Rated</option>
-            <option value="top-rated">Now Playing</option>
-            <option value="top-rated">Coming Soon</option>
-          </select>
-        </form>
+        <SubNav />
           <div>
             <h1>Favourites</h1>
-            <MovieList movies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
+            <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
           </div>
           <div>
             <h1>Popular Movies</h1>
-            <MovieList movies={movies} handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites}/>
+            <MovieList popularMovies={popularMovies} handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites}/>
           </div>
     </main>
   );
