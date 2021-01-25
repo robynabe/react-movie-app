@@ -35,7 +35,9 @@ function Individual() {
                 <div className="movie-info-individual">
                 <h2>{movie.title}</h2>
                 <h3>{movie.release_date}</h3>
-                <h3>Genres (this is an object)</h3>
+              
+                    <h3>Genre</h3>
+            
                 <h5>{movie.runtime} min</h5>
                 </div>
                 <p><i className="fas fa-star"></i> {movie.vote_average}</p>

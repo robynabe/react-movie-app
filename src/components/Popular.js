@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Individual from './Individual';
+import { shortenPars } from '../utilities/CharacterLimit';
 
 const MovieList = (props) => {
     const FavouriteComponent = props.favouriteComponent;
@@ -13,7 +13,9 @@ const MovieList = (props) => {
                         <h5>{movie.title}</h5>
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                         <h6>Overview</h6>
-                        <p>{movie.overview} <Link to={`/individual/${movie.id}`}>More info</Link></p>
+                        <p>{shortenPars(movie.overview)} 
+                        <Link className="more-info-link" to={`/individual/${movie.id}`}>More info</Link>
+                        </p>
                         <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
                             <FavouriteComponent />
                         </button>
