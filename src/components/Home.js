@@ -5,14 +5,14 @@ import AddFavourites from './AddFavourites';
 import RemoveFavourites from './RemoveFavourites';
 import SubNav from './SubNav';
 
-function Home() {
+function Home( { sort } ) {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c'; // can't get the variable to work
 
   const [favourites, setFavourites] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
 
   const getPopularMovieRequest = async () => {
-    const popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+    const popularUrl = `https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`;
 
     const response = await fetch(popularUrl);
     const responseJson = await response.json();
@@ -24,7 +24,7 @@ function Home() {
   // Request will get called only when the page loads
   useEffect(() => {
       getPopularMovieRequest();
-   }, []);
+   }, [sort]);
 
   // can't get the local storage to work - favourites disappear on refresh
   // useEffect(() => {
@@ -33,6 +33,26 @@ function Home() {
   //   );
   //   setFavourites(movieFavourites);
   // }, []);
+
+ 
+// attempting things from Michael's video
+  // function getFavourites(){
+
+  //   let movieFavourites = localStorage.getItem('favourites');
+
+  //   if(movieFavourites === null){
+  //     movieFavourites = [];
+  //   }else {
+  //     movieFavourites= JSON.parse(movieFavourites);
+  //   }
+  //   return movieFavourites;
+
+  // }
+
+  // useEffect(() => {
+  //   getFavourites();
+  //   setFavourites(getFavourites);
+  // }, [])
 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('favourites', JSON.stringify(items))
