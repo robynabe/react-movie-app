@@ -12,7 +12,8 @@ function Individual() {
 
     useEffect( () => {
         const getSingleMovie = async () => {
-            const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`);
+            const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=credits`);
+            // https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US
             let data = await response.json();
             setMovie(data);
             console.log(movie);
@@ -36,7 +37,7 @@ function Individual() {
                 <h2>{movie.title}</h2>
                 <h3>{movie.release_date}</h3>
               
-                    <h3>Genre</h3>
+                <h3>{movie.genre}</h3>
             
                 <h5>{movie.runtime} min</h5>
                 </div>

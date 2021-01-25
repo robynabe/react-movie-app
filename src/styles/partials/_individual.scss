@@ -1,6 +1,16 @@
+// .single-movie-image {
+//   width: 100%;
+//   @media (min-width: 550px) {
+//     width: 50%;
+//   }
+// }
+
 .single-movie-image {
-  width: 100%;
-  @media (min-width: 550px) {
-    width: 50%;
-  }
+  width: 50%;
+  border-radius: 10px;
+}
+
+main {
+  color: white;
+  margin: 40px;
 }
