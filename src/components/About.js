@@ -1,11 +1,11 @@
 // ABOUT PAGE //
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
     <main className="about-wrapper">
       <button className="return-home-btn">
-        <NavLink to={'/'}><i className="fas fa-step-backward"></i></NavLink>
+        <Link to={'/'}><i className="fas fa-step-backward"></i></Link>
       </button>
       <div className="about-container">
         <section className="welcome-message">
