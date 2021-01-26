@@ -38,7 +38,7 @@ function Individual() {
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                     <h4>Synopsis</h4>
                 <p>{movie.overview}minutes</p>
-                    {/* Create Loop and Output Following */}
+                    {/* Grab 'important' elements from Object array, create a function and output Following */}
                         <h4>Cast</h4>
                             <p>cast list (this will also be an object)</p>
                         <h4>Producers</h4>
