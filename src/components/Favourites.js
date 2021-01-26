@@ -2,12 +2,42 @@
 import '../styles/partials/_favourites.scss';
 import { NavLink } from 'react-router-dom';
 import MovieList from './Popular';
+import { useEffect, useState } from 'react';
+import AddFavourites from './AddFavourites';
+import RemoveFavourites from './RemoveFavourites';
 //import AddFavouriteMovie from './Home';
 
-
 function Favourites() {
+
+  const [favourites, setFavourites] = useState([]);
+  //const [popularMovies, setPopularMovies] = useState([]);
+   // This is working all of a sudden... 
+   useEffect(() => {
+    const movieFavourites = JSON.parse(
+      localStorage.getItem('favourites')
+    );
+    setFavourites(movieFavourites);
+  }, []);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('favourites', JSON.stringify(items))
+  }
+
+  const removeFavouriteMovie = (movie) => {
+     const newFavouriteList = favourites.filter(
+       (favourite) => favourite.movie_id !== movie.movie_id // movie_id taken directly from the DB
+     );
+     setFavourites(newFavouriteList);
+     saveToLocalStorage(newFavouriteList);
+  }
+
+
+  
   return (
     <main>
+
+      <h1>Favourites</h1>
+      <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
         {/* <h2 id="fav-title">This is the favourites page</h2> */}
         {/* <div className="fav-wrapper">
           <button className="return-home-btn">

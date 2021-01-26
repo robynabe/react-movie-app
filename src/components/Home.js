@@ -7,9 +7,10 @@ import SubNav from './SubNav';
 
 function Home( { sort } ) {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c'; // can't get the variable to work
-
+// copied to favourites page
   const [favourites, setFavourites] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
+  //END
 
   const getPopularMovieRequest = async () => {
     const popularUrl = `https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`;
@@ -26,14 +27,14 @@ function Home( { sort } ) {
       getPopularMovieRequest();
    }, [sort]);
 
-  // can't get the local storage to work - favourites disappear on refresh
-  // useEffect(() => {
+  //  // COPIED TO FAVOURITES
+  //  useEffect(() => {
   //   const movieFavourites = JSON.parse(
   //     localStorage.getItem('favourites')
   //   );
   //   setFavourites(movieFavourites);
   // }, []);
-
+   //END
  
 // attempting things from Michael's video
   // function getFavourites(){
@@ -54,30 +55,34 @@ function Home( { sort } ) {
   //   setFavourites(getFavourites);
   // }, [])
 
+  //COPIED TO FAVOURITES PAGE
   const saveToLocalStorage = (items) => {
     localStorage.setItem('favourites', JSON.stringify(items))
   }
-
+  //END
+ 
    const AddFavouriteMovie = (movie) => {
      const newFavouriteList = [...favourites, movie]
      setFavourites(newFavouriteList);
      saveToLocalStorage(newFavouriteList);
    }
-
-   const removeFavouriteMovie = (movie) => {
-      const newFavouriteList = favourites.filter(
-        (favourite) => favourite.movie_id !== movie.movie_id // movie_id taken directly from the DB
-      );
-      setFavourites(newFavouriteList);
-      saveToLocalStorage(newFavouriteList);
-   }
+//COPIED TO FAVOURITES
+  //  const removeFavouriteMovie = (movie) => {
+  //     const newFavouriteList = favourites.filter(
+  //       (favourite) => favourite.movie_id !== movie.movie_id // movie_id taken directly from the DB
+  //     );
+  //     setFavourites(newFavouriteList);
+  //     saveToLocalStorage(newFavouriteList);
+  //  }
+  //END
 
   return (
     <main>
         <SubNav />
           <div>
-            <h1>Favourites</h1>
-            <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
+            {/* COPIED TO FAVOURITES */}
+            {/* <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/> */}
+            {/* END */}
           </div>
           <div>
             <h1>Popular Movies</h1>
