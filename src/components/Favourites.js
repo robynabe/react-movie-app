@@ -7,7 +7,7 @@ import AddFavourites from './AddFavourites';
 import RemoveFavourites from './RemoveFavourites';
 //import AddFavouriteMovie from './Home';
 
-function Favourites() {
+function Favourites( {newFavouriteList} ) {
 
   const [favourites, setFavourites] = useState([]);
   //const [popularMovies, setPopularMovies] = useState([]);
@@ -20,7 +20,7 @@ function Favourites() {
   }, []);
 
   const saveToLocalStorage = (items) => {
-    localStorage.setItem('favourites', JSON.stringify(items))
+   localStorage.setItem('favourites', JSON.stringify(items))
   }
 
   const removeFavouriteMovie = (movie) => {

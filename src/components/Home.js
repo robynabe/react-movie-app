@@ -61,11 +61,11 @@ function Home( { sort } ) {
   }
   //END
  
-   const AddFavouriteMovie = (movie) => {
-     const newFavouriteList = [...favourites, movie]
-     setFavourites(newFavouriteList);
+  const AddFavouriteMovie = (movie) => {
+    const newFavouriteList = [...favourites, movie]
+    setFavourites(newFavouriteList);
      saveToLocalStorage(newFavouriteList);
-   }
+  }
 //COPIED TO FAVOURITES
   //  const removeFavouriteMovie = (movie) => {
   //     const newFavouriteList = favourites.filter(
