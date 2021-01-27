@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import AddFavourites from './AddFavourites';
+import AddFavouriteMovie from './Home';
+import saveToLocalStorage from './Home';
 
 function Individual() {
     const API_KEY = '80b08b43125772f29e329b06bba72a9c';
@@ -28,7 +30,7 @@ function Individual() {
                 {movie !== null &&
                     <div className="movie-poster-individual">
                         <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
-                            <AddFavourites />
+                            <AddFavourites handleFavouritesClick={AddFavouriteMovie, saveToLocalStorage} />
                         <div className="movie-info-individual">
                     <h2>{movie.title}</h2>
                 <h3>{movie.release_date}</h3>
@@ -40,6 +42,7 @@ function Individual() {
                 <p>{movie.overview}minutes</p>
                     {/* Grab 'important' elements from Object array, create a function and output Following */}
                         <h4>Cast</h4>
+                        {/* add another map/function- movies.credits.cast.map return JSX  */}
                             <p>cast list (this will also be an object)</p>
                         <h4>Producers</h4>
                     <p>Kate Croser, Jason Taylor, Lisa Shaunessy</p>

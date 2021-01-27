@@ -8,7 +8,7 @@ const MovieList = (props) => {
         <div className="featured-movies">
             {props.popularMovies.map((movie, index) => (
                 <div key={index} className="movie-info">
-                    <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+                    <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie poster"/> 
                     <div className="overview">
                         <h5>{movie.title}</h5>
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
