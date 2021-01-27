@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { shortenPars } from '../utilities/CharacterLimit';
 import AddFavourites from './AddFavourites';
+import noPoster from '../images/poster-holder.jpg';
 
 const MovieList = (props) => {
     const FavouriteComponent = props.favouriteComponent;
@@ -12,7 +13,12 @@ const MovieList = (props) => {
         <div className="featured-movies">
             {props.popularMovies.map((movie, index) => (
                 <div key={index} className="movie-info">
-                        <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title} poster`}/> 
+
+                    {movie.poster_path !== null ?
+                        <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title} poster`}/> :
+                        <img className="no-poster-image" src={noPoster} />
+                    }
+
                     <div className="overview">
                         <h5>{movie.title}</h5>
                         

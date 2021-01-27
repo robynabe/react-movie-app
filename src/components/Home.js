@@ -1,7 +1,6 @@
 // HOME PAGE //
 import { useState, useEffect } from 'react';
 import MovieList from './Popular';
-//import AddFavourites from './AddFavourites';
 import SubNav from './SubNav';
 
 
