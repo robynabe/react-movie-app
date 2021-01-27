@@ -18,13 +18,13 @@ function Individual() {
         getSingleMovie();},[id]);
 
 // Make Cast function ??
-    function makeCast(movie){ let top5Cast = movie.credits.cast.filter(person => person.order < 5);
-        top5Cast.sort((a,b) => a.order - b.order);
-            top5Cast.map((person, index) => {
-                return (
-            <p key={index}>{person.name}</p>
-          );
-        }); }
+    // function makeCast(movie){ let top5Cast = movie.credits.cast.filter(person => person.order < 5);
+    //     top5Cast.sort((a,b) => a.order - b.order);
+    //         top5Cast.map((person, index) => {
+    //             return (
+    //         <p key={index}>{person.name}</p>
+    //       );
+    //     }); }
 
         return (
             <main>
@@ -46,12 +46,10 @@ function Individual() {
                         <h4>Synopsis</h4>
                             <p>{movie.overview}minutes</p>
                                 <h4>Cast</h4>
-                            { makeCast(movie) }
-
-                        {/* {Make Cast Map} */}
-                        {/* {movie.credits.cast.map((person, index) => {
+                    
+                        {movie.credits.cast.map((person, index) => {
                         if(person.order < 5){
-                        return <p key={index}>{person.name}</p>}})} */}
+                        return <p key={index}>{person.name}</p>}})} 
 
                         <h4>Producers</h4>
                             {movie.credits.crew.map((person, index) => {
