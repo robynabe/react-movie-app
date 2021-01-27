@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import MovieList from './Popular';
 import AddFavourites from './AddFavourites';
-import RemoveFavourites from './RemoveFavourites';
 import SubNav from './SubNav';
 
 function Home( { sort, checkFav } ) {

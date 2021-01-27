@@ -1,6 +1,5 @@
 // FAVOURITES PAGE //
 import '../styles/partials/_favourites.scss';
-import { NavLink } from 'react-router-dom';
 import MovieList from './Popular';
 import { useEffect, useState } from 'react';
 //import AddFavourites from './AddFavourites';

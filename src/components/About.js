@@ -15,9 +15,9 @@ function About() {
       <section className="welcome-info">
         <p>Cineflix is a movie database that allows users to browser the most recent upcoming and newly released
           movies based on their popularity and rating. Read about all trending movies and add them to your 
-          <a className="inline-a"> favourites</a> page to save for later!
+          <Link className="inline-a" to={'/favourites'}> favourites</Link> page to save for later!
         </p>
-        <img className="film-reel-icon" src="../images/icons8-film-reel-64.png" />
+        <img className="film-reel-icon" src="../images/icons8-film-reel-64.png" alt ="Movie reel icon" />
       </section>
       </div>
     </main>
