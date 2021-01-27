@@ -46,17 +46,18 @@ function Individual() {
                         <h4>Synopsis</h4>
                             <p>{movie.overview}minutes</p>
                                 <h4>Cast</h4>
-                    
-                        {movie.credits.cast.map((person, index) => {
-                        if(person.order < 5){
-                        return <p key={index}>{person.name}</p>}})} 
+                                {movie.credits.cast.map((person, index) => {
+                                if(person.order < 5){
+                                return <p key={index}>{person.name}</p>}})} 
 
-                        <h4>Producers</h4>
-                            {movie.credits.crew.map((person, index) => {
-                                <p>{person.name}</p>})}
-                                    <h4>Director(s)</h4>
+
+                                <h4>Producers</h4>
                                 {movie.credits.crew.map((person, index) => {
-                            <p>{person.name}</p>})}
+                                <p>{person.name}</p>})}
+                                
+                                <h4>Director(s)</h4>
+                                {movie.credits.crew.map((person, index) => {
+                                <p>{person.name}</p>})}
                     </div>
                     }
             </main>
