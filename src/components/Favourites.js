@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import RemoveFavourites from './RemoveFavourites';
 //import AddFavouriteMovie from './Home';
 
-function Favourites( {newFavouriteList} ) {
+function Favourites() {
 
   const [favourites, setFavourites] = useState([]);
   //const [popularMovies, setPopularMovies] = useState([]);
@@ -17,9 +17,6 @@ function Favourites( {newFavouriteList} ) {
     );
     setFavourites(movieFavourites);
   }, []);
-
-
-  
 
   const saveToLocalStorage = (items) => {
    localStorage.setItem('favourites', JSON.stringify(items))
@@ -39,7 +36,7 @@ function Favourites( {newFavouriteList} ) {
     <main>
 
       <h1>Favourites</h1>
-      {favourites === null ?
+      {favourites.length === 0 ?
       <p>No favourited movies. Please visit home page to favourite a movie.</p> : 
       <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
       }
@@ -48,5 +45,18 @@ function Favourites( {newFavouriteList} ) {
     
   );
 }
+
+// const updatedLocalStorage = movieFavourites.JSON.parse()
+
+// function isFav(id){
+
+//   if(updatedLocalStorage.favs.length === 0){
+//     return false;
+//   }
+//   // checks whether the movie is in the favs movie
+//   // array...
+//   return updatedLocalStorage.favs.some((movie) => movie.id === id);
+
+// }
 
 export default Favourites;
