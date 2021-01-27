@@ -43,10 +43,12 @@ function Individual() {
                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                     <h4>Synopsis</h4>
                     <p>{movie.overview}minutes</p>
-                    {/* Grab 'important' elements from Object array, create a function and output Following */}
                         <h4>Cast</h4>
-                        {/* add another map/function- movies.credits.cast.map return JSX  */}
-                            <p>cast list (this will also be an object)</p>
+                        {movie.credits.cast.map((person, index) => (
+                            <p>{person.name}</p>
+                         ))}
+                      
+
                         <h4>Producers</h4>
                     <p>Kate Croser, Jason Taylor, Lisa Shaunessy</p>
                 <h4>Director(s)</h4>
