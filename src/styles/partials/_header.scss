@@ -1,36 +1,38 @@
 header {
   position: relative;
 }
-form {
-  display: block;
-  margin: 5% auto 0;
-}
 header h1 {
   margin: 10px;
 }
 
-// class names //
+.header-content {
+  position: absolute;
+}
+.img-banner {
+  width: 100%;
+  padding: 0;
+  z-index: -1;
+}
 
-// MEDIA QUERIES //
-@media (min-width: 380px) {
-  .img-banner {
-    width: 100%;
-    position: absolute;
-    padding: 0;
-    z-index: -1;
+// Search Bar //
+.search-bar {
+  position: absolute;
+  width: 320px;
+  margin: 20px auto;
+  @media (min-width: 800px) {
+    width: 600px;
   }
-  .search-bar {
-    display: flex;
-    padding: 15px;
-  }
-  #search {
-    padding: 8px 15px;
-    margin-right: 10px;
-    width: 300px;
-    border-radius: 30px;
-  }
-  #submit {
-    padding: 8px 15px;
-    border-radius: 30px;
+}
+.search-input {
+  width: 240px;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  border: none;
+  -moz-box-shadow: inset 0 0 10px #888888;
+  -webkit-box-shadow: inset 0 0 10px #888888;
+  box-shadow: inset 0 0 10px #888888;
+  @media (min-width: 800px) {
+    width: 400px;
   }
 }

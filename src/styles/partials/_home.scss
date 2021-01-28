@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
 
 main {
-  margin-top: 12%;
-  min-height: 100vh;
+  z-index: 999999;
+  background-color: black;
 }
-
 // class names //
 .featured-movies {
   display: block;
