@@ -10,7 +10,7 @@ function Footer() {
     <footer>
       <p>For educational use only &copy; {getYear()}</p>
       <p>Designed and coded by: 
-        <a href="https://github.com/omcdanielfeilden">Olivia Feilden</a> • <a href="https://github.com/seraphinawhite">Seraphina White</a> • <a href="https://github.com/robynabe">Robyn Abe</a> </p>
+        <a href="https://github.com/omcdanielfeilden"> Olivia Feilden</a> • <a href="https://github.com/seraphinawhite">Seraphina White</a> • <a href="https://github.com/robynabe">Robyn Abe</a> </p>
     </footer>
   );
 }
