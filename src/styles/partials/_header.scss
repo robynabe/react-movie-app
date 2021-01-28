@@ -1,22 +1,73 @@
 header {
   position: relative;
-}
-header h1 {
-  margin: 10px;
+  a {
+    text-shadow: 2px 2px 5px #fddae9;
+    color: black;
+    margin: 10px;
+    font-size: 50px;
+  }
+  a:hover {
+    color: #f9187c;
+    transition: ease-in-out all 250ms;
+  }
+
+  // Underline hover effect //
+  h1 > a {
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+  }
+
+  h1 > a:before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    bottom: 0;
+    left: 15px;
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: 0.25s linear;
+  }
+  h1 > a:hover:before,
+  h1 > a:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  h1 a:before {
+    background: #f9187c;
+    box-shadow: 0 0 10px 2px #fddae9;
+  }
+
+  p {
+    padding: 0.5rem;
+  }
+  p a {
+    color: #f9187c;
+  }
 }
 
 .header-content {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
   position: absolute;
+  top: 10px;
 }
 .img-banner {
   width: 100%;
+  filter: opacity(90%);
   padding: 0;
   z-index: -1;
 }
 
 // Search Bar //
+form {
+  display: block;
+  margin: 0 auto;
+}
 .search-bar {
-  position: absolute;
   width: 320px;
   margin: 20px auto;
   @media (min-width: 800px) {

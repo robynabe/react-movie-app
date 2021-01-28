@@ -1,19 +1,20 @@
 // Main Nav //
 .nav-wrapper {
   position: relative;
-  @media (min-width: 550px) {
-    .nav-wrapper {
-      display: flex;
-      justify-content: space-between;
-    }
+  margin-top: none;
+}
+@media (min-width: 550px) {
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
 .nav-bar {
   display: none;
-  @media (min-width: 520px) {
-    .nav-bar {
-      display: flex;
-    }
+}
+@media (min-width: 520px) {
+  .nav-bar {
+    display: flex;
   }
 }
 
@@ -21,13 +22,13 @@ nav {
   a {
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 24px;
+    font-size: 26px;
   }
-  @media (min-width: 520px) {
-    nav {
-      display: block;
-      color: #ffffff;
-    }
+}
+@media (min-width: 520px) {
+  nav {
+    display: block;
+    color: #ffffff;
   }
 }
 
@@ -38,20 +39,21 @@ nav {
   top: 0;
   left: 85%;
   margin: 10px;
-  color: white;
-  font-size: 30px;
+  color: black;
+  font-size: 35px;
+  text-shadow: 2px 2px 5px #fddae9;
   border: none;
   background-color: transparent;
   float: right;
   z-index: 3;
-  .hamburger-btn:hover {
-    color: lightgray;
+  .fa-bars:hover {
+    color: #f9187c;
     transition: ease-in-out 250ms;
   }
-  @media (min-width: 550px) {
-    .hamburger-btn {
-      display: none;
-    }
+}
+@media (min-width: 550px) {
+  .hamburger-btn {
+    display: none;
   }
 }
 .mobile-nav ul {
