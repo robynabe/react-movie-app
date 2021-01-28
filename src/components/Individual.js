@@ -103,29 +103,30 @@ function Individual(props) {
                     </div>
                    
                     <div className="movie-info-individual">
-                                                    <h2>{movie.title}</h2>
-                                                    <h3>{movie.release_date}</h3>
-                                                    
-                                                    {movie.genres.map((genre) =>
-                                                                    <li key={genre.name}>{genre.name}</li>)}
-                                                                    <h5>{movie.runtime} min</h5>
-                                                                    <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                                                    <h4>Synopsis</h4>
-                                                        <p>{movie.overview}minutes</p>
-                                                        <div class="cast">
-                                                        <h4>Cast</h4>
-                                                        </div>
-                                                    {movie.credits.cast.map((person, index) => {
-                                                    if(person.order < 5){
-                                                    return <p key={index}>{person.name}</p>}})}
-                    
+                            <h2>{movie.title}</h2>
+                            <h3>{movie.release_date}</h3>
+                            
+                            {movie.genres.map((genre) =>
+                                            <li key={genre.name}>{genre.name}</li>)}
+                                            <h5>{movie.runtime} min</h5>
+                                            <p><i className="fas fa-star"></i> {movie.vote_average}</p>
+                            <h4>Synopsis</h4>
+                                <p>{movie.overview}minutes</p>
+                                
+                                <h4>Cast</h4>
+                                
+                            {movie.credits.cast.map((person, index) => {
+                            if(person.order < 5){
+                            return <ol key={index}>
+                                    <li>{person.name}</li></ol>}})}
 
-                                                    <h4>Producers</h4>
-                                                    {getProducer(movie)}
-                                                    <h4>Director(s)</h4>
-                                                    {getDirectors(movie)}
-                                                    </div>
-                    
+
+                            <h4>Producers</h4>
+                            {getProducer(movie)}
+                            <h4>Director(s)</h4>
+                            {getDirectors(movie)}
+                            </div>
+
                     </div>
                 
                 }
