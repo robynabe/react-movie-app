@@ -7,8 +7,8 @@
   padding: 20px;
   max-width: 800px;
   border-radius: 10px;
-  background-color:  black(75, 75, 75, 0.673);
-  box-shadow: 0px 0px 12px 0px #F9187C;
+  background-color: black(75, 75, 75, 0.673);
+  box-shadow: 0px 0px 12px 0px #f9187c;
   // @media (min-width: 800px) {
   //   background-color: rgba(75, 75, 75, 0.673);
   //   box-shadow: 0 2px 2px rgba(255, 255, 255, 0.03),
@@ -17,27 +17,26 @@
   //     0 90px 70px rgba(200, 200, 200, 0.1);
   // }
 
-  p{
+  p {
     margin: 0;
   }
 }
 .welcome-message {
   text-align: center;
   color: #ffffff;
-
 }
 .inline-a {
   color: #ffffff;
   text-decoration: underline;
 
-  &:hover{
-    color: #F9187C;
+  &:hover {
+    color: #f9187c;
     text-shadow: 2px 2px 15px #fddae9;
   }
 }
 
-.about-title{
-  text-shadow: 2px 2px 15px #fddae9
+.about-title {
+  text-shadow: 2px 2px 15px #fddae9;
 }
 .welcome-info {
   max-width: 800px;
@@ -67,5 +66,3 @@
 //   padding: 3px;
 //   margin: 10px;
 // }
-
-

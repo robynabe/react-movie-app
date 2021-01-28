@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 
 function About() {
+
   return (
     <main className="about-wrapper">
       <div className="about-container">
@@ -15,6 +16,10 @@ function About() {
           </p>
           <img className="film-reel-icon" src="../images/icons8-film-reel-65.png" alt ="Movie reel icon" />
         </section>
+        <aside>
+          <p>This prodcut uses the TMDb API, but it not endorsed or certified by TMDb *insert logo here*</p>
+        </aside>
+          
       </div>
     </main>
   );
