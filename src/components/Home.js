@@ -6,7 +6,7 @@ import SubNav from './SubNav';
 
 
 
-function Home( { sort, checkFav } ) {
+function Home( { sort } ) {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c'; // can't get the variable to work
 
   const [favourites, setFavourites] = useState([]);
@@ -80,8 +80,4 @@ function Home( { sort, checkFav } ) {
     </main>
   );
 }
-Home.defaultProps = {
-  checkFav: true
-}
-
 export default Home;
