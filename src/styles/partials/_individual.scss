@@ -59,6 +59,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 2px 2px 15px #fddae9;
+  max-width: 500px;
 }
 
 .movie-individual-wrapper{
@@ -125,6 +126,11 @@
   }
 }
 
+.rate-heart{
+  display: flex;
+  flex-direction: row;
+}
+
 // .fav-btn-container{
 //   text-align: right;
 // }
@@ -150,7 +156,7 @@
   }
 
   .single-movie-image{
-    max-width: 1000px;
+    max-width: 500px;
   }
 
 }
