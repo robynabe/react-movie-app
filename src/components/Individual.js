@@ -88,42 +88,58 @@ function Individual(props) {
                 {movie !== null &&
                     <div class="movie-individual-container">
                         {/* Movie Poster Div */}
-                        <div className="movie-individual-wrapper">
+                        
                             <div className="movie-poster-individual">
-                                {/* <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/> */}
-                                <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+                                <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
+                                <h1 className="individual-movie-title">{movie.title}</h1>
+                                {/* <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/> */}
                             </div>
+                        <div className="movie-individual-wrapper">
                             <div className="movie-info-individual">
-                                <h2>{movie.title}</h2>
-                                <p>{movie.release_date}</p>
-                                {movie.genres.map((genre) =>
-                                        <p key={genre.name}>{genre.name}</p>)}
+                                <div className="rating-release">
+                                    <p className="release-date">{movie.release_date}</p>
+                                    <p><i className="fas fa-star"></i> {movie.vote_average}</p>
+                                    <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn-individual">
+                                        <AddFavourites />
+                                    </button>
+                                </div>
+                                <div className="small-container">
+                                    
+                                        <h5>Synopsis</h5>
+                                        <p>{movie.overview}</p>
+                                        <h6>Cast</h6>
+                                        <ul className="cast-list">
+                                            {movie.credits.cast.map((person, index) => {
+                                                if(person.order < 5){
+                                                return <li key={index} className="list-item">{person.name}</li> 
+                                                }
+                                            })} 
+                                        </ul>
+                                    <h6>Producers</h6>
+                                    <div class="producer-list">
+                                        {getProducer(movie)}
+                                    </div>
+                                    <h6>Director</h6>
+                                    <div className="director-list">
+                                        {getDirectors(movie)}
+                                    </div>
+                                    <hr></hr>
+                                    <div className="genre-run-time">
+                                        <ul className="genre-list">
+                                            {movie.genres.map((genre) =>
+                                            <li key={genre.name} className="list-item">{genre.name}</li>)}
+                                        </ul>
                                         <p>{movie.runtime} min</p>
-                                        <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                                    <h5>Synopsis</h5>
-                                    <p>{movie.overview}minutes</p>
-                                    <h5>Cast</h5>
-                                    <ul>
-                                        {movie.credits.cast.map((person, index) => {
-                                            if(person.order < 5){
-                                            return <ul key={index}>
-                                                    <li>{person.name}</li>
-                                                    </ul>
-                                            }
-                                        })} 
-                                    </ul>
- 
-                                <h4>Producers</h4>
-                                {getProducer(movie)}
-                                <h4>Director(s)</h4>
-                                {getDirectors(movie)}
+                                    </div>
+
+                                </div>
+                                
+                                    
+                                
                             </div>
                         </div>
                     </div>
                 }
-                <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
-                <AddFavourites />
-                </button>
                   {/* <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
                       <FavouriteComponent handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites} />
                       </button>
