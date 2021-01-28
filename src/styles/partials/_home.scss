@@ -93,3 +93,23 @@ main {
   //color: #fec810;
   color: #fafe10;
 }
+
+//sidebar lines //
+@media (min-width: 1500px) {
+  .vl-left,
+  .vl-right {
+    display: block;
+    position: fixed;
+    top: 30px;
+    border-left: 5px solid #fddae9;
+    box-shadow: 0px 0px 12px 0px #f9187c;
+    border-radius: 10px;
+    height: 700px;
+  }
+  .vl-left {
+    left: 40px;
+  }
+  .vl-right {
+    right: 40px;
+  }
+}
