@@ -2,7 +2,7 @@ h1 {
   color: white;
 }
 
-.no-favourites-wrapper{
+.no-favourites-container{
   display: block;
   margin: 0 auto;
   padding: 20px;
@@ -14,7 +14,17 @@ h1 {
 
   h1{
     text-shadow: 2px 2px 15px #fddae9;
+    text-align: center;
   }
+}
+
+.favourites-wrapper{
+  
+    text-align: center;
+ 
+}
+.favourites-title{
+  text-shadow: 2px 2px 15px #fddae9;
 }
 
 
