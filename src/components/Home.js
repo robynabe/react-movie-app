@@ -32,6 +32,7 @@ function Home( { sort } ) {
         movieFavourites = JSON.parse(movieFavourites);
       }
       setFavourites(movieFavourites);
+
    }, [sort]);
 
  
@@ -62,18 +63,14 @@ function Home( { sort } ) {
 //   return updatedLocalStorage.favourites.some((movie) => movie.id === movie.id);
 
 // }
-  
-   
-
+let page = sort;
+let currentPage = page.replace("_", " ");
 
   return (
     <main>
         <SubNav />
-          <div>
-
-          </div>
-          <div>
-            <h1>{sort}</h1>
+          <div >
+            <h1 className="current-page-title">{currentPage}</h1>
             <MovieList popularMovies={popularMovies} handleFavouritesClick={AddFavouriteMovie}  />
           </div>
     </main>

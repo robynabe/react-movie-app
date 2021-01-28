@@ -3,7 +3,7 @@ header {
   a {
     text-shadow: 2px 2px 5px #fddae9;
     color: black;
-    margin: 10px;
+    margin: 15px;
     font-size: 50px;
   }
   a:hover {
@@ -14,7 +14,7 @@ header {
   // Underline hover effect //
   h1 > a {
     text-decoration: none;
-    color: black;
+    color: white;
     z-index: 1;
   }
 
@@ -24,7 +24,7 @@ header {
     width: 200px;
     height: 3px;
     bottom: 0;
-    left: 15px;
+    left: 22px;
     visibility: hidden;
     border-radius: 5px;
     transform: scaleX(0);
@@ -39,27 +39,32 @@ header {
     background: #f9187c;
     box-shadow: 0 0 10px 2px #fddae9;
   }
-
-  p {
-    padding: 0.5rem;
-  }
-  p a {
-    color: #f9187c;
-  }
 }
-
 .header-content {
   display: block;
   margin: 0 auto;
   width: 100%;
+  max-width: 1400px;
   position: absolute;
   top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 .img-banner {
   width: 100%;
-  filter: opacity(90%);
-  padding: 0;
+  max-width: 1400px;
+  filter: opacity(80%);
   z-index: -1;
+}
+// Not working to center iimage
+@media (min-width: 1300px) {
+  .banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 // Search Bar //

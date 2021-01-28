@@ -28,7 +28,9 @@ function Header() {
 
   return (
     <header>
-      <img className="img-banner" src={banner} alt="Dark movie theatre with red seating"/>
+      <div className="banner-container">
+        <img className="img-banner" src={banner} alt="Cinema entrance with neon signs"/>
+      </div>
       <div className="header-content">
         <div className='nav-wrapper'>
           <h1><Link to={'/'}>CINEFLIX</Link></h1>
