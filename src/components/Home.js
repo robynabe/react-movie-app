@@ -1,6 +1,7 @@
 // HOME PAGE //
 import { useState, useEffect } from 'react';
 import MovieList from './Popular';
+import FavouriteButton from './RemoveFavourites';
 import SubNav from './SubNav';
 
 
@@ -74,7 +75,7 @@ function Home( { sort } ) {
           </div>
           <div>
             <h1>{sort}</h1>
-            <MovieList popularMovies={popularMovies} handleFavouritesClick={AddFavouriteMovie}  />
+            <MovieList popularMovies={popularMovies} handleFavouritesClick={FavouriteButton}  />
           </div>
     </main>
   );

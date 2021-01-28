@@ -4,6 +4,7 @@ import MovieList from './Popular';
 import { useEffect, useState } from 'react';
 //import AddFavourites from './AddFavourites';
 import RemoveFavourites from './RemoveFavourites';
+import { Link } from 'react-router-dom';
 //import AddFavouriteMovie from './Home';
 
 function Favourites() {
@@ -34,12 +35,16 @@ function Favourites() {
   
   return (
     <main>
-
-      <h1>Favourites</h1>
-      {favourites.length === 0 ?
-      <p>No favourited movies. Please visit home page to favourite a movie.</p> : 
-      <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
-      }
+      <div className="no-favourites-wrapper">
+        <h1>Favourites</h1>
+        {favourites.length === 0 ?
+          <div className="no-favourites-container"> 
+            <p className="no-fave-text">Oops! No movies have been added. Navigate back <Link to={'/'} className="home-link">Home</Link> to add a fave movie!</p>
+            <img className="film-reel-icon" src="../images/icons8-popcorn-48.png" alt ="Movie reel icon" />
+          </div> : 
+          <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
+        }
+      </div>
       
     </main>
     

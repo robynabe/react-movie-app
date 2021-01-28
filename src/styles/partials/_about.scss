@@ -1,26 +1,43 @@
-.about-wrapper {
-  margin-top: 15%;
-}
+// .about-wrapper {
+//   margin-top: 15%;
+// }
 .about-container {
   display: block;
   margin: 0 auto;
   padding: 20px;
   max-width: 800px;
-  border-radius: 8px;
-  @media (min-width: 800px) {
-    background-color: rgba(75, 75, 75, 0.673);
-    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.03),
-      0 6px 5px rgba(255, 255, 255, 0.05), 0 12px 10px rgba(255, 255, 255, 0.06),
-      0 22px 17px rgba(67, 67, 67, 0.07), 0 30px 28px rgba(255, 255, 255, 0.08),
-      0 90px 70px rgba(200, 200, 200, 0.1);
+  border-radius: 10px;
+  background-color:  black(75, 75, 75, 0.673);
+  box-shadow: 0px 0px 12px 0px #F9187C;
+  // @media (min-width: 800px) {
+  //   background-color: rgba(75, 75, 75, 0.673);
+  //   box-shadow: 0 2px 2px rgba(255, 255, 255, 0.03),
+  //     0 6px 5px rgba(255, 255, 255, 0.05), 0 12px 10px rgba(255, 255, 255, 0.06),
+  //     0 22px 17px rgba(67, 67, 67, 0.07), 0 30px 28px rgba(255, 255, 255, 0.08),
+  //     0 90px 70px rgba(200, 200, 200, 0.1);
+  // }
+
+  p{
+    margin: 0;
   }
 }
 .welcome-message {
   text-align: center;
   color: #ffffff;
+
 }
 .inline-a {
   color: #ffffff;
+  text-decoration: underline;
+
+  &:hover{
+    color: #F9187C;
+    text-shadow: 2px 2px 15px #fddae9;
+  }
+}
+
+.about-title{
+  text-shadow: 2px 2px 15px #fddae9
 }
 .welcome-info {
   max-width: 800px;
@@ -51,7 +68,4 @@
 //   margin: 10px;
 // }
 
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
+
