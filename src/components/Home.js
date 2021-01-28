@@ -1,7 +1,7 @@
 // HOME PAGE //
 import { useState, useEffect } from 'react';
 import MovieList from './Popular';
-import FavouriteButton from './RemoveFavourites';
+import FavouriteButton from './FavouritesButton';
 import SubNav from './SubNav';
 
 
@@ -72,7 +72,7 @@ let currentPage = page.replace("_", " ");
         <SubNav />
           <div >
             <h1 className="current-page-title">{currentPage}</h1>
-            <MovieList popularMovies={popularMovies} handleFavouritesClick={FavouriteButton}  />
+            <MovieList popularMovies={popularMovies} handleFavouritesClick={AddFavouriteMovie}  />
           </div>
     </main>
   );

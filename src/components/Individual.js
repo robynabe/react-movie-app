@@ -1,7 +1,7 @@
 // INDIVIDUAL PAGE //
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import AddFavourites from './AddFavourites';
+import FavouriteButton from './FavouritesButton';
 // import AddFavouriteMovie from './Home';
 // import saveToLocalStorage from './Home';
 
@@ -122,7 +122,7 @@ function Individual(props) {
                         <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
                     <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
-                        <AddFavourites />
+                        <FavouriteButton />
                     </button>
                     <div className="movie-info-individual">
                         <h2>{movie.title}</h2>

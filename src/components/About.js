@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 function About() {
   return (
     <main className="about-wrapper">
-      <button className="return-home-btn">
-        <Link to={'/'}><i className="fas fa-step-backward"></i></Link>
-      </button>
       <div className="about-container">
           <section className="welcome-message">
           <h2 className="about-title">About Cineflix</h2>

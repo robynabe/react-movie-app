@@ -3,9 +3,9 @@ import '../styles/partials/_favourites.scss';
 import MovieList from './Popular';
 import { useEffect, useState } from 'react';
 //import AddFavourites from './AddFavourites';
-import RemoveFavourites from './RemoveFavourites';
+import FavouriteButton from './FavouritesButton';
 import { Link } from 'react-router-dom';
-//import AddFavouriteMovie from './Home';
+import AddFavouriteMovie from './Home';
 
 function Favourites() {
 
@@ -42,7 +42,7 @@ function Favourites() {
             <p className="no-fave-text">Oops! No movies have been added. Navigate back <Link to={'/'} className="home-link">Home</Link> to add a fave movie!</p>
             <img className="film-reel-icon" src="../images/icons8-popcorn-48.png" alt ="Movie reel icon" />
           </div> : 
-          <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} favouriteComponent = {RemoveFavourites}/>
+          <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} />
         }
       </div>
       
