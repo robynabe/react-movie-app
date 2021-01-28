@@ -1,10 +1,37 @@
-// class names //
+// Main Nav //
 .nav-wrapper {
   position: relative;
+  @media (min-width: 550px) {
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 .nav-bar {
   display: none;
+  @media (min-width: 520px) {
+    .nav-bar {
+      display: flex;
+    }
+  }
 }
+
+nav {
+  a {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  @media (min-width: 520px) {
+    nav {
+      display: block;
+      color: #ffffff;
+    }
+  }
+}
+
+// Mobile Nav //
 .hamburger-btn {
   display: block;
   position: absolute;
@@ -17,6 +44,15 @@
   background-color: transparent;
   float: right;
   z-index: 3;
+  .hamburger-btn:hover {
+    color: lightgray;
+    transition: ease-in-out 250ms;
+  }
+  @media (min-width: 550px) {
+    .hamburger-btn {
+      display: none;
+    }
+  }
 }
 .mobile-nav ul {
   position: absolute;
@@ -31,49 +67,21 @@
   text-align: center;
   background: rgba(0, 0, 0, 0.85);
   padding: 40px;
-}
-.mobile-nav li {
-  padding: 20px;
-}
-nav a {
-  margin-right: 10px;
-  margin-left: 10px;
-  font-size: 24px;
-}
-
-// hover states //
-.hamburger-btn:hover {
-  color: lightgray;
-  transition: ease-in-out 250ms;
-}
-
-// MEDIA QUERIES //
-@media (min-width: 520px) {
-  nav {
-    display: block;
-    color: #ffffff;
+  li {
+    padding: 20px;
   }
-  .nav-bar {
-    display: block;
-  }
-  .hamburger-btn {
-    display: none;
-  }
-  .nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-  .nav-bar {
-    display: flex;
+  a:hover {
+    color: red;
+    transition: ease-in-out all 250ms;
   }
 }
 
-/* SUB NAV */
-.sub-nav a {
-  font-size: 14px;
+// Sub Nav //
+.sub-nav {
+  a {
+    font-size: 14px;
+  }
 }
-
-// Hover States //
 
 .select-btn:hover {
   box-shadow: 0 2px 2px rgba(200, 200, 200, 0.03),

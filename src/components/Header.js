@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import Search from './Search';
 import { useState, useEffect } from 'react';
+import banner from '../images/cinema2-myke-simon-unsplash.jpg';
 
 function Header() {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c';
@@ -27,13 +28,15 @@ function Header() {
 
   return (
     <header>
-      <img className="img-banner" src="/images/cinema-felix-mooneeram-unsplash.jpg" alt="Dark movie theatre with red seating"/>
-      <div className='nav-wrapper'>
-        <h1><Link to={'/'}>CINEFLIX</Link></h1>
-        <Nav />
+      <img className="img-banner" src={banner} alt="Dark movie theatre with red seating"/>
+      <div className="header-content">
+        <div className='nav-wrapper'>
+          <h1><Link to={'/'}>CINEFLIX</Link></h1>
+          <Nav />
+        </div>
+        <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
       </div>
-     <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
-    </header>
+      </header>
   );
 }
 
