@@ -1,8 +1,7 @@
 // FAVOURITES PAGE //
 import '../styles/partials/_favourites.scss';
-import MovieList from './Popular';
+import MovieList from './MovieList';
 import { useEffect, useState } from 'react';
-//import AddFavourites from './AddFavourites';
 import FavouriteButton from './FavouritesButton';
 import { Link } from 'react-router-dom';
 import AddFavouriteMovie from './Home';
@@ -10,33 +9,29 @@ import AddFavouriteMovie from './Home';
 function Favourites() {
 
   const [favourites, setFavourites] = useState([]);
-  //const [popularMovies, setPopularMovies] = useState([]);
-   // This is working all of a sudden... 
-   useEffect(() => {
-    const movieFavourites = JSON.parse(
+
+    useEffect(() => {
+      const movieFavourites = JSON.parse(
       localStorage.getItem('favourites')
     );
-    setFavourites(movieFavourites);
-  }, []);
+      setFavourites(movieFavourites);
+    }, []);
 
-  const saveToLocalStorage = (items) => {
-   localStorage.setItem('favourites', JSON.stringify(items))
-  }
+    const saveToLocalStorage = (items) => {
+      localStorage.setItem('favourites', JSON.stringify(items))
+    }
 
   const removeFavouriteMovie = (movie) => {
-     const newFavouriteList = favourites.filter(
-       (favourite) => favourite.id !== movie.id // movie_id taken directly from the DB
+       const newFavouriteList = favourites.filter(
+       (favourite) => favourite.id !== movie.id 
      );
-     setFavourites(newFavouriteList);
-     saveToLocalStorage(newFavouriteList);
+      setFavourites(newFavouriteList);
+      saveToLocalStorage(newFavouriteList);
   }
 
-
-  
   return (
     <main>
       <div className="no-favourites-wrapper">
-       
           {favourites.length === 0 ?
             <div className="no-favourites-container"> 
             <h1>Favourites</h1>
@@ -47,26 +42,12 @@ function Favourites() {
               <h1 className="favourites-title">Favourites</h1>
               <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} />
             </div>
-            
           }
       </div>
-      
     </main>
     
   );
 }
 
-// const updatedLocalStorage = movieFavourites.JSON.parse()
-
-// function isFav(id){
-
-//   if(updatedLocalStorage.favs.length === 0){
-//     return false;
-//   }
-//   // checks whether the movie is in the favs movie
-//   // array...
-//   return updatedLocalStorage.favs.some((movie) => movie.id === id);
-
-// }
 
 export default Favourites;

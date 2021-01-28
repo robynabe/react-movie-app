@@ -1,13 +1,11 @@
 // HOME PAGE //
 import { useState, useEffect } from 'react';
-import MovieList from './Popular';
+import MovieList from './MovieList';
 import RemoveFavourites from './FavouritesButton';
 import SubNav from './SubNav';
 
-
-
 function Home( { sort } ) {
-  const API_KEY = '80b08b43125772f29e329b06bba72a9c'; // can't get the variable to work
+  const API_KEY = '80b08b43125772f29e329b06bba72a9c'; 
 
   const [favourites, setFavourites] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
@@ -36,34 +34,17 @@ function Home( { sort } ) {
 
    }, [sort]);
 
- 
- 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('favourites', JSON.stringify(items))
   }
  
- 
-  // Trying to stop duplicate movies added to faves 
    const AddFavouriteMovie = (movie) => {
-      // if(useState.movieFavourites.some((movie) => movie.id === movie.id)){
         const newFavouriteList = [...favourites, movie]
         setFavourites(newFavouriteList);
         saveToLocalStorage(newFavouriteList);
         console.log(movie.id)
-      //}
    }
-  // Checking for Multiples in Faves
-// const AddFavouriteMovie = (movie) => {
-//   const updatedLocalStorage = favourites.JSON.parse()
 
-//   if(updatedLocalStorage.favourites.length === 0){
-//     return false;
-//   }
-//   // checks whether the movie is in the favs movie
-//   // array...
-//   return updatedLocalStorage.favourites.some((movie) => movie.id === movie.id);
-
-// }
 let page = sort;
 let currentPage = page.replace("_", " ");
 
