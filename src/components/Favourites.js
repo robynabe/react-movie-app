@@ -31,12 +31,12 @@ function Favourites() {
 
   return (
     <main>
-      <div class="vl-left"></div>
-      <div class="vl-right"></div>
+      <div className="vl-left"></div>
+      <div className="vl-right"></div>
       <div className="no-favourites-wrapper">
           {favourites.length === 0 ?
             <div className="no-favourites-container"> 
-            <h1>Favourites</h1>
+              <h1>Favourites</h1>
                 <p className="no-fave-text">Oops! No movies have been added. Navigate back <Link to={'/'} className="home-link">Home</Link> to add a fave movie!</p>
                 <img className="film-reel-icon" src="../images/icons8-popcorn-48.png" alt ="Movie reel icon" />
             </div> : 

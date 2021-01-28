@@ -85,8 +85,8 @@ function Individual(props) {
             }
         return (
             <main>
-                <div class="vl-left"></div>
-                <div class="vl-right"></div>
+                <div className="vl-left"></div>
+                <div className="vl-right"></div>
                 {movie !== null &&
                     <div class="movie-individual-container">
                         {/* Movie Poster Div */}
@@ -100,10 +100,12 @@ function Individual(props) {
                             <div className="movie-info-individual">
                                 <div className="rating-release">
                                     <p className="release-date">{movie.release_date}</p>
-                                    <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                                    <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn-individual">
-                                        <AddFavourites />
-                                    </button>
+                                    <div className="rate-heart">
+                                        <p><i className="fas fa-star"></i> {movie.vote_average}</p>
+                                        <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn-individual">
+                                            <AddFavourites />
+                                        </button>
+                                    </div>
                                 </div>
                                 <div className="small-container">
                                     
