@@ -4,6 +4,11 @@ main {
   z-index: 999999;
   background-color: black;
 }
+.current-page-title {
+  margin: 30px 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px #fddae9;
+}
 // class names //
 .featured-movies {
   display: block;
@@ -20,12 +25,12 @@ main {
   justify-content: space-between;
   margin: 20px auto;
   border-radius: 10px;
-  background-color:  rgba(75, 75, 75, 0.673);
+  background-color: rgba(75, 75, 75, 0.673);
   // box-shadow: 0 2px 2px rgba(200, 200, 200, 0.03),
   //   0 6px 5px rgba(200, 200, 200, 0.05), 0 12px 10px rgba(200, 200, 200, 0.06),
   //   0 22px 17px rgba(67, 67, 67, 0.07), 0 30px 28px rgba(200, 200, 200, 0.08),
   //   0 90px 70px rgba(200, 200, 200, 0.1);
-  box-shadow: 0px 0px 12px 0px #F9187C;
+  box-shadow: 0px 0px 12px 0px #f9187c;
   max-width: 380px;
   max-height: 270px;
   overflow: hidden;
@@ -57,7 +62,7 @@ main {
   border-radius: 10px 0 0 10px;
 }
 
-.movie-image{
+.movie-image {
   opacity: 0.8;
 }
 .overview {
@@ -68,27 +73,6 @@ main {
 .fa-star {
   //color: #fec810;
   color: #fafe10;
-}
-
-.select-btn {
-  border: none;
-  border-radius: 8px;
-  color: #ffffff;
-  background-color: rgba(75, 75, 75, 0.673);
-  margin: 20px;
-  padding: 10px 20px;
-  a:hover {
-    color: #ffffff;
-    font-size: 18px;
-  }
-}
-
-// id's //
-#sort-by {
-  padding: 8px 15px;
-  margin-left: 5px;
-  border-radius: 6px;
-  border: none;
 }
 
 // DESKTOP VIEW //

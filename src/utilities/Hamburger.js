@@ -25,9 +25,9 @@ export default class Hamburger extends Component {
                 <button className="hamburger-btn" onClick={this.toggle}><i className="fas fa-bars"></i></button>
                 {this.state.show && (
                     <ul>
-                        <li><NavLink to={'/'} onClick={this.close}>Home</NavLink></li>
-                        <li><NavLink to={'/about'} onClick={this.close}>About</NavLink></li>
-                        <li><NavLink to={'/favourites'} onClick={this.close}>Favourites</NavLink></li>
+                        <li><NavLink to={'/'} onClick={this.close}><h3>Home</h3></NavLink></li>
+                        <li><NavLink to={'/about'} onClick={this.close}><h3>About</h3></NavLink></li>
+                        <li><NavLink to={'/favourites'} onClick={this.close}><h3>Favourites</h3></NavLink></li>
                     </ul>
                 )}
             </div>

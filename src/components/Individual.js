@@ -18,6 +18,7 @@ function Individual(props) {
         const getSingleMovie = async () => {
             const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=credits`);
             let data = await response.json();
+            console.log(data);
             setMovie(data);
         
         }
@@ -60,6 +61,32 @@ function Individual(props) {
             //}
          }
 
+        const getDirectors = (movie) => {
+        let directors = movie.credits.crew.filter(crewMember => crewMember.job === 'Director');
+        console.log(directors);
+        if(directors.length === 0){
+            return (
+                <p>No directors currently listed...</p>
+            )
+        }else{
+            directors = directors.map(director => director.name);
+            return directors.map(director => <p>{director}</p>);
+            }
+        }
+
+        const getProducer = (movie) => {
+            let producer = movie.credits.crew.filter(crewMember => crewMember.job === 'Producer');
+            console.log(producer);
+            if(producer.length === 0){
+                return (
+                    <p>No producers currently listed...</p>
+                )
+            }else{
+                producer = producer.map(producer => producer.name);
+                return producer.map(producer => <p>{producer}</p>);
+                }
+            }
+
         return (
             <main>
                 {/*
@@ -84,41 +111,31 @@ function Individual(props) {
                         <h4>Synopsis</h4>
                             <p>{movie.overview}minutes</p>
                                 <h4>Cast</h4>
-                            { makeCast(movie) }
-                                        */}       
-                        {/* {Make Cast Map} */}
-                        {/* {movie.credits.cast.map((person, index) => {
+                          {movie.credits.cast.map((person, index) => {
                         if(person.order < 5){
                         return <p key={index}>{person.name}</p>}})} */}
             
-                {movie !== null && 
+                {movie !== null &&
                 <div>
+                    <div class="movie-individual-container">
                     <div className="movie-poster-individual">
                         <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
+                    <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
+                        <AddFavourites />
+                    </button>
                     <div className="movie-info-individual">
                         <h2>{movie.title}</h2>
                         <h3>{movie.release_date}</h3>
                     </div>
                     <h4>Producers</h4>
+                    {getProducer(movie)}
                     <h4>Director(s)</h4>
-                    <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
-                        <AddFavourites />
-                    </button>
+                    {getDirectors(movie)}
+                    
+                    </div>
                 </div>
                 }
-                    
-                    
-                        
-                    {/*movie.credits.crew.map((person) => {
-                            <p>{person.name}</p>
-                    })*/}
-                                   
-                    
-                    {/*movie.credits.crew.map((person) => {
-                        <p>{person.name}</p>
-                    })*/}
-                            
                 
                     
             </main>
