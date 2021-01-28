@@ -43,7 +43,18 @@ function Home( { sort } ) {
         const newFavouriteList = [...favourites, movie]
         setFavourites(newFavouriteList);
         saveToLocalStorage(newFavouriteList);
-        console.log(movie.id)
+        //console.log(movie.id)
+   }
+
+   const deleteFavourites = (id) => {
+    console.log('remove favourites')
+    const indexOfMovieToRemove = favourites.findIndex(movie => movie.id === id);
+    console.log(indexOfMovieToRemove)
+    let tempArray = [...favourites];
+    tempArray.splice(indexOfMovieToRemove, 1);
+    console.log(tempArray)
+    setFavourites(tempArray);
+    saveToLocalStorage(tempArray);
    }
 
 let page = sort;
@@ -56,7 +67,7 @@ let currentPage = page.replace("_", " ");
         <SubNav />
           <div>
             <h1 className="current-page-title">{currentPage}</h1>
-            <MovieList popularMovies={popularMovies} handleFavouritesClick={AddFavouriteMovie}  />
+            <MovieList popularMovies={popularMovies} handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites}  />
           </div>
           <Scroll />
     </main>

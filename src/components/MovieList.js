@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { shortenPars } from '../utilities/CharacterLimit';
 import noPoster from '../images/poster-holder.jpg';
 import AddFavourites from './AddFavourites';
+import RemoveFavourites from './FavouritesButton'
 
 const MovieList = (props) => {
     const FavouriteComponent = props.favouriteComponent;
@@ -21,9 +22,10 @@ const MovieList = (props) => {
                         <h6>Overview</h6>
                         <p>{shortenPars(movie.overview)}</p>
                         <Link className="more-info-link" to={`/individual/${movie.id}`}>More info</Link>
-                        <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
+                        <RemoveFavourites movie={movie} handleAddFavourites={props.handleAddFavourites} handleDeleteFavourites={props.handleDeleteFavourites} />
+                        {/* <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
                             <AddFavourites />
-                        </button>
+                        </button> */}
                     </div>
                 </div>
         ))}

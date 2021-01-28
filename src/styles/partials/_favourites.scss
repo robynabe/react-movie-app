@@ -37,7 +37,7 @@ h1 {
   }
 }
 
-.fav-btn {
+.bi-heart, .bi-heart-fill {
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -45,12 +45,13 @@ h1 {
   position: absolute;
   right: 10px;
   bottom: 10px;
+
+  &:hover{
+    transform: scale(1.6);
+    transition: ease-in-out 200ms;
+  }
 }
 
-.fav-btn:hover {
-  transform: scale(1.6);
-  transition: ease-in-out 200ms;
-}
 
 @media (min-width: 400px) {
   // .movie-section {

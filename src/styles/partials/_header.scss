@@ -15,7 +15,7 @@ header {
   h1 > a {
     text-decoration: none;
     color: white;
-    z-index: 1;
+    // z-index: 1;
   }
 
   h1 > a:before {
@@ -55,7 +55,7 @@ header {
   width: 100%;
   max-width: 1400px;
   filter: opacity(80%);
-  z-index: -1;
+  // z-index: -1;
 }
 
 @media (min-width: 1300px) {

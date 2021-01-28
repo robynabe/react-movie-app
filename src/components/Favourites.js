@@ -9,26 +9,43 @@ import Scroll from './ScrollTop';
 
 function Favourites() {
 
-  const [favourites, setFavourites] = useState([]);
+  let favsFromStorage = localStorage.getItem('favourites');
+  if(!favsFromStorage){
+      favsFromStorage = [];
+  }else{
+      favsFromStorage = JSON.parse(favsFromStorage);
+  }
 
-    useEffect(() => {
-      const movieFavourites = JSON.parse(
-      localStorage.getItem('favourites')
-    );
-      setFavourites(movieFavourites);
-    }, []);
+  const [favourites, setFavourites] = useState(favsFromStorage);
+
+    // useEffect(() => {
+    //   const movieFavourites = JSON.parse(
+    //   localStorage.getItem('favourites')
+    // );
+    //   setFavourites(movieFavourites);
+    // }, []);
 
     const saveToLocalStorage = (items) => {
       localStorage.setItem('favourites', JSON.stringify(items))
     }
 
-  const removeFavouriteMovie = (movie) => {
-       const newFavouriteList = favourites.filter(
-       (favourite) => favourite.id !== movie.id 
-     );
-      setFavourites(newFavouriteList);
-      saveToLocalStorage(newFavouriteList);
-  }
+  const AddFavouriteMovie = (movie) => {
+    const newFavouriteList = [...favourites, movie]
+    setFavourites(newFavouriteList);
+    saveToLocalStorage(newFavouriteList);
+    //console.log(movie.id)
+}
+
+const deleteFavourites = (id) => {
+  console.log('remove favourites')
+  const indexOfMovieToRemove = favourites.findIndex(movie => movie.id === id);
+  console.log(indexOfMovieToRemove)
+  let tempArray = [...favourites];
+  tempArray.splice(indexOfMovieToRemove, 1);
+  console.log(tempArray)
+  setFavourites(tempArray);
+  saveToLocalStorage(tempArray);
+}
 
   return (
     <main>
@@ -43,7 +60,7 @@ function Favourites() {
             </div> : 
             <div className="favourites-wrapper">
               <h1 className="favourites-title">Favourites</h1>
-              <MovieList popularMovies={favourites} handleFavouritesClick={removeFavouriteMovie} />
+              <MovieList popularMovies={favourites} handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites} />
             </div>
           }
       </div>
