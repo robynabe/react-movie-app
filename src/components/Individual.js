@@ -85,6 +85,8 @@ function Individual(props) {
             }
         return (
             <main>
+                <div class="vl-left"></div>
+                <div class="vl-right"></div>
                 {movie !== null &&
                     <div class="movie-individual-container">
                         {/* Movie Poster Div */}

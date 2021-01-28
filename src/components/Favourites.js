@@ -31,6 +31,8 @@ function Favourites() {
 
   return (
     <main>
+      <div class="vl-left"></div>
+      <div class="vl-right"></div>
       <div className="no-favourites-wrapper">
           {favourites.length === 0 ?
             <div className="no-favourites-container"> 

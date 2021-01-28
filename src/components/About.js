@@ -5,6 +5,8 @@ function About() {
 
   return (
     <main className="about-wrapper">
+      <div class="vl-left"></div>
+      <div class="vl-right"></div>
       <div className="about-container">
           <section className="welcome-message">
           <h2 className="about-title">About Cineflix</h2>
