@@ -115,11 +115,15 @@ function Individual(props) {
                         if(person.order < 5){
                         return <p key={index}>{person.name}</p>}})} */}
             
-                {movie !== null && 
+                {movie !== null &&
                 <div>
+                    <div class="movie-individual-container">
                     <div className="movie-poster-individual">
                         <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
+                    <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
+                        <AddFavourites />
+                    </button>
                     <div className="movie-info-individual">
                         <h2>{movie.title}</h2>
                         <h3>{movie.release_date}</h3>
@@ -128,9 +132,8 @@ function Individual(props) {
                     {getProducer(movie)}
                     <h4>Director(s)</h4>
                     {getDirectors(movie)}
-                    <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
-                        <AddFavourites />
-                    </button>
+                    
+                    </div>
                 </div>
                 }
                 
