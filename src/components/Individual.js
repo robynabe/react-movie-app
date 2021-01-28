@@ -101,10 +101,10 @@ function Individual(props) {
                         <div className="movie-individual-wrapper">
                             <div className="movie-info-individual">
                                 <div className="rating-release">
-                                    <p className="release-date">{movie.release_date}</p>
+                                    <p className="release-date-individual">{movie.release_date}</p>
                                     <div className="rate-heart">
                                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                        
+
                                             <RemoveFavourites movie={movie} className="fav-btn-individual" handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites}/>
                                     </div>
                                 </div>
