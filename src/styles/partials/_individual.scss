@@ -1,38 +1,76 @@
 
 
-// Font
-main {
-  color: white;
-  margin: 40px;
-}
+// // Font
+// main {
+//   color: white;
+//   margin: 40px;
+// }
 
-.movie-poster-individual {
-    display: flex;
+// .movie-poster-individual {
+//     display: flex;
     
-    .movie-poster-individual {
-      flex: 0 0 300px;
+//     .movie-poster-individual {
+//       flex: 0 0 300px;
       
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    }
-    .movie-info-individual {
-      flex: 1;
-    }
+//       img {
+//         display: block;
+//         width: 100%;
+//         height: auto;
+//       }
+//     }
+//     .movie-info-individual {
+//       flex: 1;
+//     }
+// }
+
+// .cast {
+// display: flex;
+// list-style-type: none;
+// }
+
+
+// // Movie Poster and Text Container
+// .movie-individual-container {
+//   display: flex;
+//   padding-left: 30px;
+//   margin-left: 40px;
+//   justify-content: space-around;
+// }
+
+
+.single-movie-image{
+
+  max-width: 180px;
+  height: auto;
+  border-radius: 10px 10px;
 }
 
-.cast {
-display: flex;
-list-style-type: none;
+.movie-individual-container{
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  background-color:  black(75, 75, 75, 0.673);
+  box-shadow: 0px 0px 12px 0px #F9187C;
+  //text-align: center;
+  color: white;
+
+  h1{
+    text-shadow: 2px 2px 15px #fddae9;
+    text-align: center;
+  }
 }
 
-
-// Movie Poster and Text Container
-.movie-individual-container {
+.movie-individual-wrapper{
   display: flex;
-  padding-left: 30px;
-  margin-left: 40px;
-  justify-content: space-around;
 }
+@media(min-width: 600px){
+
+ 
+
+}
+
+
+
+

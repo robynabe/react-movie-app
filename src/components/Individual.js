@@ -83,71 +83,52 @@ function Individual(props) {
                 return producer.map(producer => <p>{producer}</p>);
                 }
             }
-
-
-
-
         return (
             <main>
-            {/* Return Button */}
-            <button className="return-home-btn">
-            <Link to={'/'}><i className="fas fa-step-backward"></i></Link>
-            </button>
-
                 {movie !== null &&
-               
                     <div class="movie-individual-container">
-                                                    {/* Movie Poster Div */}
-                    <div className="movie-poster-individual">
-                                                    <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
-                    </div>
-                   
-                    <div className="movie-info-individual">
-                            <h2>{movie.title}</h2>
-                            <h3>{movie.release_date}</h3>
-                            
-                            {movie.genres.map((genre) =>
-                                            <li key={genre.name}>{genre.name}</li>)}
-                                            <h5>{movie.runtime} min</h5>
-                                            <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                            <h4>Synopsis</h4>
-                                <p>{movie.overview}minutes</p>
-                                
-                                <h4>Cast</h4>
-                                
-                            {movie.credits.cast.map((person, index) => {
-                            if(person.order < 5){
-                            return <ol key={index}>
-                                    <li>{person.name}</li></ol>}})}
-
-
-                            <h4>Producers</h4>
-                            {getProducer(movie)}
-                            <h4>Director(s)</h4>
-                            {getDirectors(movie)}
+                        {/* Movie Poster Div */}
+                        <div className="movie-individual-wrapper">
+                            <div className="movie-poster-individual">
+                                {/* <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/> */}
+                                <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
                             </div>
-
+                            <div className="movie-info-individual">
+                                <h2>{movie.title}</h2>
+                                <p>{movie.release_date}</p>
+                                {movie.genres.map((genre) =>
+                                        <p key={genre.name}>{genre.name}</p>)}
+                                        <p>{movie.runtime} min</p>
+                                        <p><i className="fas fa-star"></i> {movie.vote_average}</p>
+                                    <h5>Synopsis</h5>
+                                    <p>{movie.overview}minutes</p>
+                                    <h5>Cast</h5>
+                                    <ul>
+                                        {movie.credits.cast.map((person, index) => {
+                                            if(person.order < 5){
+                                            return <ul key={index}>
+                                                    <li>{person.name}</li>
+                                                    </ul>
+                                            }
+                                        })} 
+                                    </ul>
+ 
+                                <h4>Producers</h4>
+                                {getProducer(movie)}
+                                <h4>Director(s)</h4>
+                                {getDirectors(movie)}
+                            </div>
+                        </div>
                     </div>
-                
                 }
-                
-
                 <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
                 <AddFavourites />
                 </button>
-
-
-
                   {/* <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
                       <FavouriteComponent handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites} />
                       </button>
-                  */}
-                             
-                    
+                  */}     
             </main>
-
-            
         );
-}
-
-    export default Individual;
+    }
+export default Individual;
