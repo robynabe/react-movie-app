@@ -1,29 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
 
+// Main and Page title //
 main {
   z-index: 999999;
   background-color: black;
+  padding: 15px;
 }
 .current-page-title {
   margin: 30px 15px;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px #fddae9;
 }
-// class names //
+
+// Movie info containers //
 .featured-movies {
   display: block;
   margin: 0 auto;
   max-width: 1600px;
 }
-
-.sort-movies {
-  margin-left: 15px;
+@media (min-width: 400px) {
+  .featured-movies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .movie-info {
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin: 20px auto;
+  margin: 20px 10px;
   border-radius: 10px;
   background-color: rgba(75, 75, 75, 0.673);
   // box-shadow: 0 2px 2px rgba(200, 200, 200, 0.03),
@@ -39,34 +46,46 @@ main {
     font-size: 1.35em;
     font-weight: 600;
   }
+  &:hover {
+    filter: opacity(40%);
+  }
 }
-
+// Trying to get the more info button to appear on hover
 .more-info-link {
-  color: white;
+  display: block;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 5px 10px;
 
-  &:hover{
-    color: #F9187C;
+  &:hover {
+    color: white;
+    border: 1px solid #f9187c;
     text-shadow: 2px 2px 15px #fddae9;
+    filter: none;
   }
 }
 
 //not working for some reason
-.fav-heart{
+.fav-heart {
   text-shadow: 2px 2px 15px #fddae9;
 }
-
 .no-poster-image,
 .movie-image {
   max-width: 180px;
   height: auto;
   border-radius: 10px 0 0 10px;
 }
-
 .movie-image {
   opacity: 0.8;
 }
 .overview {
-  margin: 15px;
+  margin: 10px;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
 }
@@ -75,12 +94,22 @@ main {
   color: #fafe10;
 }
 
-// DESKTOP VIEW //
-@media (min-width: 400px) {
-  .featured-movies {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+//sidebar lines //
+@media (min-width: 1500px) {
+  .vl-left,
+  .vl-right {
+    display: block;
+    position: fixed;
+    top: 30px;
+    border-left: 5px solid #fddae9;
+    box-shadow: 0px 0px 12px 0px #f9187c;
+    border-radius: 10px;
+    height: 700px;
+  }
+  .vl-left {
+    left: 40px;
+  }
+  .vl-right {
+    right: 40px;
   }
 }

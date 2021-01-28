@@ -47,7 +47,7 @@ nav {
   border: none;
   background-color: transparent;
   float: right;
-  z-index: 3;
+  z-index: 99999;
   .fa-bars:hover {
     color: #f9187c;
     transition: ease-in-out 250ms;
@@ -61,7 +61,7 @@ nav {
 .mobile-nav ul {
   position: absolute;
   margin-top: 0;
-  z-index: 2;
+  z-index: 99998;
   top: -20%;
   left: 50%;
   transform: translate(-50%, 0);

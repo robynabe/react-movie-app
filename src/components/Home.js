@@ -51,7 +51,9 @@ let currentPage = page.replace("_", " ");
   return (
     <main>
         <SubNav />
-          <div >
+          <div>
+            <div class="vl-left"></div>
+            <div class="vl-right"></div>
             <h1 className="current-page-title">{currentPage}</h1>
             <MovieList popularMovies={popularMovies} handleFavouritesClick={AddFavouriteMovie}  />
           </div>
