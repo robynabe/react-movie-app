@@ -50,28 +50,20 @@ main {
     font-size: 1.35em;
     font-weight: 600;
   }
-  &:hover {
-    filter: opacity(40%);
-  }
 }
 // Trying to get the more info button to appear on hover
 .more-info-link {
-  display: block;
   color: transparent;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: none;
+  padding: 5px 10px;
   border-radius: 20px;
   background-color: transparent;
-  padding: 5px 10px;
+  border: 1px solid #f9187c;
+  color: white;
+  text-align: center;
 
   &:hover {
-    color: white;
-    border: 1px solid #f9187c;
     text-shadow: 2px 2px 15px #fddae9;
-    filter: none;
   }
 }
 

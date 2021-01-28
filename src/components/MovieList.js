@@ -15,7 +15,7 @@ const MovieList = (props) => {
                             <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title} poster`}/> :
                             <img className="no-poster-image" src={noPoster} />
                         }
-                        <div className="overview">
+                        <div key={index} className="overview">
                             <h5>{movie.title}</h5>
                             <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                             <p>Released {movie.release_date}</p>
