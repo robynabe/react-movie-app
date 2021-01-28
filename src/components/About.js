@@ -1,5 +1,6 @@
 // ABOUT PAGE //
 import { Link } from 'react-router-dom';
+import Scroll from './ScrollTop';
 
 function About() {
 
@@ -23,6 +24,7 @@ function About() {
         </aside>
           
       </div>
+      <Scroll />
     </main>
   );
 }

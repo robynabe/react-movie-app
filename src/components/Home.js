@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import MovieList from './MovieList';
 import RemoveFavourites from './FavouritesButton';
 import SubNav from './SubNav';
+import Scroll from './ScrollTop';
 
 function Home( { sort } ) {
   const API_KEY = '80b08b43125772f29e329b06bba72a9c'; 
@@ -57,6 +58,7 @@ let currentPage = page.replace("_", " ");
             <h1 className="current-page-title">{currentPage}</h1>
             <MovieList popularMovies={popularMovies} handleFavouritesClick={AddFavouriteMovie}  />
           </div>
+          <Scroll />
     </main>
   );
 }

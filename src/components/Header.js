@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <header>
-      <div className="banner-container">
+      <div id="header" className="banner-container">
         <img className="img-banner" src={banner} alt="Cinema entrance with neon signs"/>
       </div>
       <div className="header-content">
