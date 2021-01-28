@@ -2,10 +2,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import AddFavourites from './AddFavourites';
+import RemoveFavourites from './FavouritesButton';
 import FavouriteButton from './FavouritesButton';
 import Scroll from './ScrollTop';
-// import AddFavouriteMovie from './Home';
-// import saveToLocalStorage from './Home';
+import deleteFavourites from './Home';
+
 
 function Individual(props) {
     const API_KEY = '80b08b43125772f29e329b06bba72a9c';
@@ -103,9 +104,8 @@ function Individual(props) {
                                     <p className="release-date">{movie.release_date}</p>
                                     <div className="rate-heart">
                                         <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                                        <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn-individual">
-                                            <AddFavourites />
-                                        </button>
+                        
+                                            <RemoveFavourites movie={movie} className="fav-btn-individual" handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites}/>
                                     </div>
                                 </div>
                                 <div className="small-container">
