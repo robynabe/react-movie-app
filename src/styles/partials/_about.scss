@@ -1,6 +1,10 @@
-// .about-wrapper {
-//   margin-top: 15%;
-// }
+.about-wrapper {
+  margin-top: 50px;
+  min-height: 100%;
+  display: flex;
+  flex-grow: 1;
+  padding: 15px;
+}
 .about-container {
   display: block;
   margin: 0 auto;
@@ -58,11 +62,6 @@
   color: white;
   font-size: 30px;
 }
-
-// .arrow {
-//   border: solid red;
-//   border-width: 0 3px 3px 0;
-//   display: inline-block;
-//   padding: 3px;
-//   margin: 10px;
-// }
+.cls-1 {
+  fill: url(#linear-gradient);
+}

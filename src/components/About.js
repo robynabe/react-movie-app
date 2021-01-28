@@ -17,7 +17,7 @@ function About() {
           <img className="film-reel-icon" src="../images/icons8-film-reel-65.png" alt ="Movie reel icon" />
         </section>
         <aside>
-          <p>This prodcut uses the TMDb API, but it not endorsed or certified by TMDb *insert logo here*</p>
+          <p>This prodcut uses the TMDb API, but it not endorsed or certified by TMDb</p> <span></span>
         </aside>
           
       </div>
