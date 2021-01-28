@@ -31,7 +31,8 @@
 }
 .inline-a {
   color: #ffffff;
-  text-decoration: underline;
+  //text-decoration: underline;
+  font-style: italic;
 
   &:hover {
     color: #f9187c;
@@ -68,5 +69,18 @@
 
 .movie-logo{
   //<style>.cls-1{fill:url(#linear-gradient);}</style>
+
+}
+
+.attribution{
+  color: rgba(255, 255, 255, 0.822);
+  margin-right: 10px;
+  font-style: italic;
+
+}
+
+.attribution-container{
+  display: flex;
+  justify-content: center;
   
 }
