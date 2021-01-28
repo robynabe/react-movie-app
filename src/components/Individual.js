@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import AddFavourites from './AddFavourites';
 import FavouriteButton from './FavouritesButton';
+import Scroll from './ScrollTop';
 // import AddFavouriteMovie from './Home';
 // import saveToLocalStorage from './Home';
 
@@ -147,7 +148,8 @@ function Individual(props) {
                   {/* <button onClick={()=> AddFavouriteMovie(movie)} className="fav-btn">
                       <FavouriteComponent handleFavouritesClick={AddFavouriteMovie} favouriteComponent = {AddFavourites} />
                       </button>
-                  */}     
+                  */}   
+                  <Scroll />  
             </main>
         );
     }

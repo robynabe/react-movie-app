@@ -1,6 +1,6 @@
 // ABOUT PAGE //
 import { Link } from 'react-router-dom';
-import MovieLogo from './Logo';
+import Scroll from './ScrollTop';
 
 function About() {
 
@@ -22,13 +22,12 @@ function About() {
           </section>          
         </div>
       </div>
-      <aside>
-          <p>This prodcut uses the TMDb API, but it not endorsed or certified by TMDb</p> <span></span>
+      <aside className="attribution-container">
+          <p className="attribution">This product uses the TMDb API, but it not endorsed or certified by TMDb.</p> 
           {/* <MovieLogo className="movie-logo"/> */}
           <img className="movie-image" src={`https://image.tmdb.org/movie-app/static/media/TMDBlogo.08392f18.svg`} /> :
-
         </aside>
-     
+      <Scroll />
     </main>
   );
 }
