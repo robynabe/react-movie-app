@@ -112,7 +112,9 @@ function Individual(props) {
                                                                     <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                                                     <h4>Synopsis</h4>
                                                         <p>{movie.overview}minutes</p>
+                                                        <div class="cast">
                                                         <h4>Cast</h4>
+                                                        </div>
                                                     {movie.credits.cast.map((person, index) => {
                                                     if(person.order < 5){
                                                     return <p key={index}>{person.name}</p>}})}

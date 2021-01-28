@@ -7,11 +7,24 @@ main {
 }
 
 .movie-poster-individual {
-    height: 900px;
-    width:500px;
-    overflow:hidden;
+    display: flex;
+    
+    .movie-poster-individual {
+      flex: 0 0 300px;
+      
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .movie-info-individual {
+      flex: 1;
+    }
 }
 
+
+// Movie Poster and Text Container
 .movie-individual-container {
   display: flex;
   padding-left: 30px;
