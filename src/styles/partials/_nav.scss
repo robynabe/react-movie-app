@@ -9,6 +9,7 @@
     justify-content: space-between;
   }
 }
+
 .nav-bar {
   display: none;
   margin-top: 15px;
@@ -22,6 +23,7 @@
     ul {
       position: relative;
     }
+    // hover animation //
     li:before {
       content: "";
       position: absolute;
@@ -96,6 +98,7 @@ nav {
     padding: 20px;
     position: relative;
   }
+  // hover animation //
   li:before {
     content: "";
     position: absolute;
@@ -119,7 +122,7 @@ nav {
   }
 }
 
-// Sub Nav //
+// Sub Nav (Popular, toprated etc)//
 .sub-nav {
   display: block;
   margin: 20px auto;
@@ -132,6 +135,7 @@ nav {
     font-size: 14px;
   }
 }
+
 .select-btn {
   text-transform: uppercase;
   border: none;
@@ -143,10 +147,10 @@ nav {
   a:hover {
     color: #ffffff;
   }
-}
-.select-btn:hover {
-  box-shadow: 0px 0px 12px 0px #f9187c;
-  transition: ease-in-out all 200ms;
-  color: white;
-  background-color: black;
+  &:hover {
+    box-shadow: 0px 0px 12px 0px #f9187c;
+    transition: ease-in-out all 200ms;
+    color: white;
+    background-color: black;
+  }
 }

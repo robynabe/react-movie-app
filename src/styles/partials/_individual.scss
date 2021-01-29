@@ -33,6 +33,31 @@
 //   margin-left: 40px;
 //   justify-content: space-around;
 // }
+
+// Individual containers //
+.movie-individual-wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: black(75, 75, 75, 0.673);
+  //box-shadow: 0px 0px 12px 0px #F9187C;
+  //text-align: center;
+  color: white;
+  font-family: "Manrope", sans-serif;
+
+  h1 {
+    text-shadow: 2px 2px 15px #fddae9;
+    text-align: center;
+  }
+}
+
+.small-container {
+  font-size: small;
+}
+
+// Individual elements //
 .movie-poster-individual {
   position: relative;
   text-align: center;
@@ -58,35 +83,6 @@
   max-width: 500px;
 }
 
-.movie-individual-wrapper {
-  display: block;
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 400px;
-  border-radius: 10px;
-  background-color: black(75, 75, 75, 0.673);
-  //box-shadow: 0px 0px 12px 0px #F9187C;
-  //text-align: center;
-  color: white;
-  font-family: "Manrope", sans-serif;
-
-  h1 {
-    text-shadow: 2px 2px 15px #fddae9;
-    text-align: center;
-  }
-}
-
-.small-container {
-  font-size: small;
-}
-
-.cast-list,
-.producer-list,
-.genre-list {
-  display: flex;
-  //justify-content: space-between;
-  padding: 0;
-}
 .rating-release {
   display: flex;
   justify-content: space-between;
@@ -100,6 +96,7 @@
     margin-right: 10px;
   }
 }
+
 .fav-btn-individual {
   cursor: pointer;
   border: none;
@@ -113,6 +110,14 @@
   }
 }
 
+.cast-list,
+.producer-list,
+.genre-list {
+  display: flex;
+  //justify-content: space-between;
+  padding: 0;
+}
+
 .producer-list {
   p {
     margin-right: 10px;
@@ -124,10 +129,7 @@
   flex-direction: row;
 }
 
-// .fav-btn-container{
-//   text-align: right;
-// }
-
+// Media Queries for single move info/elements //
 @media (min-width: 600px) {
   .list-item {
     margin-right: 15px;
