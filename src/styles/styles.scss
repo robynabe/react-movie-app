@@ -10,8 +10,5 @@
 @use './partials/favourites';
 @use './partials/individual';
 
-// variable import
-@import "./variables/variables.scss";
-
-// font
+// font import //
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Manrope&display=swap");
