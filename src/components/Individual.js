@@ -11,11 +11,19 @@ import deleteFavourites from './Home';
 function Individual(props) {
     const API_KEY = '80b08b43125772f29e329b06bba72a9c';
 
-    const [favourites, setFavourites] = useState([]);
+    //const [favourites, setFavourites] = useState([]);
     //const FavouriteComponent = props.favouriteComponent;
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
+
+    let favsFromStorage = localStorage.getItem('favourites');
+    if(!favsFromStorage){
+        favsFromStorage = [];
+    }else{
+        favsFromStorage = JSON.parse(favsFromStorage);
+    }
+    const [favourites, setFavourites] = useState(favsFromStorage);
 
     useEffect( () => {
             const getSingleMovie = async () => {
@@ -85,10 +93,13 @@ function Individual(props) {
                     <div className="movie-individual-wrapper">
                         <div className="movie-info-individual">
                             <div className="rating-release">
-                                <p className="release-date">{movie.release_date}</p>
+                                <p className="release-date-individual">{movie.release_date}</p>
                                 <div className="rate-heart">
                                     <p><i className="fas fa-star"></i> {movie.vote_average}</p>
-                                        <RemoveFavourites movie={movie} className="fav-btn-individual" handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites}/>
+                                    <div className="fav-btn-individual">
+                                        <RemoveFavourites movie={movie}  handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites}/>
+                                    </div>
+
                                 </div>
                             </div>
                             <div className="small-container">
