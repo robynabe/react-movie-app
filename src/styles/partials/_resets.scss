@@ -8,10 +8,10 @@ html {
 }
 
 body {
+  position: relative;
+  z-index: -3;
   margin: 0;
   background-color: black;
-  //background-color: #f0f1f1;
-  // z-index: -1000;
 }
 h1 {
   display: inline-block;
