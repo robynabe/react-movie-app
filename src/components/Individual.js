@@ -13,7 +13,7 @@ function Individual(props) {
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
-
+    
     let favsFromStorage = localStorage.getItem('favourites');
     if(!favsFromStorage){
         favsFromStorage = [];
@@ -36,19 +36,13 @@ function Individual(props) {
     },[id]);
 
     const saveToLocalStorage = (items) => {
-
         localStorage.setItem('favourites', JSON.stringify(items))
-
-    }
-
-    // Trying to stop duplicate movies added to faves 
+    } 
     const AddFavouriteMovie = (movie) => {
-
-        const newFavouriteList = [...favourites, movie]
-        setFavourites(newFavouriteList);
-        saveToLocalStorage(newFavouriteList);
-        console.log(movie.id)
-
+            const newFavouriteList = [...favourites, movie]
+            setFavourites(newFavouriteList);
+            saveToLocalStorage(newFavouriteList);
+            //console.log(movie.id)
     }
 
     const getDirectors = (movie) => {

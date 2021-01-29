@@ -32,7 +32,7 @@ function Home( { sort } ) {
       }
       setFavourites(movieFavourites);
 
-   }, [sort]);
+  }, [sort]);
 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('favourites', JSON.stringify(items))
