@@ -2,9 +2,7 @@
 import '../styles/partials/_favourites.scss';
 import MovieList from './MovieList';
 import { useState } from 'react';
-import FavouriteButton from './FavouritesButton';
 import { Link } from 'react-router-dom';
-import AddFavouriteMovie from './Home';
 import Scroll from './ScrollTop';
 
 function Favourites() {

@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { shortenPars } from '../utilities/CharacterLimit';
 import noPoster from '../images/poster-holder.jpg';
-import AddFavourites from './AddFavourites';
-import RemoveFavourites from './FavouritesButton'
+import FavouritesButton from './FavouritesButton'
 
 const MovieList = (props) => {
     const FavouriteComponent = props.favouriteComponent;
@@ -23,7 +22,7 @@ const MovieList = (props) => {
                         <p>{shortenPars(movie.overview)}</p>
                         <Link className="more-info-link" to={`/individual/${movie.id}`}>More info</Link>
                         <div className="home-page-favourites-page-heart">
-                        <RemoveFavourites movie={movie} handleAddFavourites={props.handleAddFavourites} handleDeleteFavourites={props.handleDeleteFavourites} />
+                        <FavouritesButton movie={movie} handleAddFavourites={props.handleAddFavourites} handleDeleteFavourites={props.handleDeleteFavourites} />
                         </div>
 
                         {/* <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">

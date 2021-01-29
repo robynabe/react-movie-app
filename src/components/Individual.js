@@ -1,9 +1,7 @@
 // INDIVIDUAL PAGE //
 import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import AddFavourites from './AddFavourites';
-import RemoveFavourites from './FavouritesButton';
-import FavouriteButton from './FavouritesButton';
+import {  useParams } from 'react-router-dom';
+import FavouritesButton from './FavouritesButton';
 import Scroll from './ScrollTop';
 import deleteFavourites from './Home';
 
@@ -97,7 +95,7 @@ function Individual(props) {
                                 <div className="rate-heart">
                                     <p><i className="fas fa-star"></i> {movie.vote_average}</p>
                                     <div className="fav-btn-individual">
-                                        <RemoveFavourites movie={movie}  handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites}/>
+                                        <FavouritesButton movie={movie}  handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites}/>
                                     </div>
 
                                 </div>

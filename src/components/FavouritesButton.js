@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 // I left the following code for Michael to review when we meet 
 
-function RemoveFavourites({ movie, handleAddFavourites, handleDeleteFavourites }) {
+function FavouritesButton({ movie, handleAddFavourites, handleDeleteFavourites }) {
 
     let favsFromStorage = localStorage.getItem('favourites');
     if(!favsFromStorage){
@@ -70,4 +70,4 @@ function deleteFavourites(id){
 //     )
 // }
 
-export default RemoveFavourites;
+export default FavouritesButton;
