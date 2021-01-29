@@ -3,28 +3,13 @@ import { useState, useEffect } from 'react';
 import {  useParams } from 'react-router-dom';
 import FavouritesButton from './FavouritesButton';
 import Scroll from './ScrollTop';
-//import deleteFavourites from './Home';
 import noImage from '../images/no-image-available.png';
 
 function Individual(props) {
     const API_KEY = '80b08b43125772f29e329b06bba72a9c';
 
-    //const [favourites, setFavourites] = useState([]);
-    //const FavouriteComponent = props.favouriteComponent;
-
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
-    /*
-    let favsFromStorage = localStorage.getItem('favourites');
-    if(!favsFromStorage){
-        favsFromStorage = [];
-    }else{
-        favsFromStorage = JSON.parse(favsFromStorage);
-    }*/
-    //const [favourites, setFavourites] = useState(favsFromStorage);
-
-    
-    
 
     useEffect( () => {
 
@@ -54,9 +39,7 @@ function Individual(props) {
 
     const AddFavouriteMovie = (movie) => {
             const newFavouriteList = [...getFavsFromStorage(), movie]
-            //setFavourites(newFavouriteList);
             saveToLocalStorage(newFavouriteList);
-            //console.log(movie.id)
     }
 
     const deleteFavourites = (id) => {
@@ -69,7 +52,7 @@ function Individual(props) {
 
     const getDirectors = (movie) => {
         let directors = movie.credits.crew.filter(crewMember => crewMember.job === 'Director');
-        console.log(directors);
+        //console.log(directors);
         if(directors.length === 0){
 
             return (
@@ -86,7 +69,7 @@ function Individual(props) {
 
     const getProducer = (movie) => {
         let producer = movie.credits.crew.filter(crewMember => crewMember.job === 'Producer');
-        console.log(producer);
+        //console.log(producer);
         if(producer.length === 0){
 
             return (
@@ -106,7 +89,7 @@ return (
         <div className="vl-left"></div>
         <div className="vl-right"></div>
         {movie !== null &&
-            <div class="movie-individual-container">
+            <div className="movie-individual-container">
                 <div className="movie-poster-individual">
                     {movie.backdrop_path !== null ?
                         <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/> :
@@ -137,7 +120,7 @@ return (
                                 })} 
                             </ul>
                             <h6>Producers</h6>
-                            <div class="producer-list">
+                            <div className="producer-list">
                                 {getProducer(movie)}
                             </div>
                             <h6>Director</h6>
@@ -147,8 +130,8 @@ return (
                             <hr></hr>
                             <div className="genre-run-time">
                                 <ul className="genre-list">
-                                    {movie.genres.map((genre) =>
-                                    <li key={genre.name} className="list-item">{genre.name}</li>)}
+                                    {movie.genres.map((genre, g) =>
+                                    <li key={g} className="list-item">{genre.name}</li>)}
                                 </ul>
                                 <p>{movie.runtime} min</p>
                             </div>

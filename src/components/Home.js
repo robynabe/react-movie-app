@@ -17,7 +17,7 @@ function Home( { sort } ) {
     const response = await fetch(popularUrl);
     const responseJson = await response.json();
 
-    console.log(responseJson);
+    //console.log(responseJson);
     setPopularMovies(responseJson.results);
     }
 
@@ -46,12 +46,12 @@ function Home( { sort } ) {
    }
 
    const deleteFavourites = (id) => {
-    console.log('remove favourites')
+    //('remove favourites')
     const indexOfMovieToRemove = favourites.findIndex(movie => movie.id === id);
-    console.log(indexOfMovieToRemove)
+    //console.log(indexOfMovieToRemove)
     let tempArray = [...favourites];
     tempArray.splice(indexOfMovieToRemove, 1);
-    console.log(tempArray)
+    //console.log(tempArray)
     setFavourites(tempArray);
     saveToLocalStorage(tempArray);
    }
@@ -61,8 +61,8 @@ let currentPage = page.replace("_", " ");
 
   return (
     <main>
-      <div class="vl-left"></div>
-      <div class="vl-right"></div>
+      <div className="vl-left"></div>
+      <div className="vl-right"></div>
         <SubNav />
           <div>
             <h1 className="current-page-title">{currentPage}</h1>

@@ -35,12 +35,12 @@ function Favourites() {
 }
 
 const deleteFavourites = (id) => {
-  console.log('remove favourites')
+  //console.log('remove favourites')
   const indexOfMovieToRemove = favourites.findIndex(movie => movie.id === id);
-  console.log(indexOfMovieToRemove)
+  //console.log(indexOfMovieToRemove)
   let tempArray = [...favourites];
   tempArray.splice(indexOfMovieToRemove, 1);
-  console.log(tempArray)
+  //console.log(tempArray)
   setFavourites(tempArray);
   saveToLocalStorage(tempArray);
 }

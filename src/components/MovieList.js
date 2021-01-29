@@ -24,10 +24,6 @@ const MovieList = (props) => {
                         <div className="home-page-favourites-page-heart">
                         <FavouritesButton movie={movie} handleAddFavourites={props.handleAddFavourites} handleDeleteFavourites={props.handleDeleteFavourites} />
                         </div>
-
-                        {/* <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
-                            <AddFavourites />
-                        </button> */}
                     </div>
                 </div>
         ))}
