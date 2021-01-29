@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import {  useParams } from 'react-router-dom';
 import FavouritesButton from './FavouritesButton';
 import Scroll from './ScrollTop';
-import deleteFavourites from './Home';
+//import deleteFavourites from './Home';
 import noImage from '../images/no-image-available.png';
 
 function Individual(props) {
@@ -14,14 +14,16 @@ function Individual(props) {
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
-    
+    /*
     let favsFromStorage = localStorage.getItem('favourites');
     if(!favsFromStorage){
         favsFromStorage = [];
     }else{
         favsFromStorage = JSON.parse(favsFromStorage);
-    }
-    const [favourites, setFavourites] = useState(favsFromStorage);
+    }*/
+    //const [favourites, setFavourites] = useState(favsFromStorage);
+
+    
     
 
     useEffect( () => {
@@ -39,11 +41,30 @@ function Individual(props) {
     const saveToLocalStorage = (items) => {
         localStorage.setItem('favourites', JSON.stringify(items))
     } 
+
+    const getFavsFromStorage = () => {
+        let favsFromStorage = localStorage.getItem('favourites');
+        if(!favsFromStorage){
+            favsFromStorage = [];
+        }else{
+            favsFromStorage = JSON.parse(favsFromStorage);
+        }
+        return favsFromStorage;
+    }
+
     const AddFavouriteMovie = (movie) => {
-            const newFavouriteList = [...favourites, movie]
-            setFavourites(newFavouriteList);
+            const newFavouriteList = [...getFavsFromStorage(), movie]
+            //setFavourites(newFavouriteList);
             saveToLocalStorage(newFavouriteList);
             //console.log(movie.id)
+    }
+
+    const deleteFavourites = (id) => {
+        const favsFromStorage = getFavsFromStorage()
+        const indexOfMovieToRemove = favsFromStorage.findIndex(movie => movie.id === id);
+        // Remove movie from favs array
+        favsFromStorage.splice(indexOfMovieToRemove, 1);
+        saveToLocalStorage(favsFromStorage);
     }
 
     const getDirectors = (movie) => {
