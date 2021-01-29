@@ -43,8 +43,7 @@
   }
 }
 
-.bi-heart,
-.bi-heart-fill {
+.home-page-favourites-page-heart {
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -52,6 +51,7 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
+
 
   &:hover {
     transform: scale(1.6);
