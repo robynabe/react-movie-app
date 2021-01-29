@@ -22,7 +22,10 @@ const MovieList = (props) => {
                         <h6>Overview</h6>
                         <p>{shortenPars(movie.overview)}</p>
                         <Link className="more-info-link" to={`/individual/${movie.id}`}>More info</Link>
+                        <div className="home-page-favourites-page-heart">
                         <RemoveFavourites movie={movie} handleAddFavourites={props.handleAddFavourites} handleDeleteFavourites={props.handleDeleteFavourites} />
+                        </div>
+
                         {/* <button onClick={()=> props.handleFavouritesClick(movie)} className="fav-btn">
                             <AddFavourites />
                         </button> */}

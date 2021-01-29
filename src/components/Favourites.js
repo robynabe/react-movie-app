@@ -1,7 +1,7 @@
 // FAVOURITES PAGE //
 import '../styles/partials/_favourites.scss';
 import MovieList from './MovieList';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import FavouriteButton from './FavouritesButton';
 import { Link } from 'react-router-dom';
 import AddFavouriteMovie from './Home';
@@ -60,7 +60,7 @@ const deleteFavourites = (id) => {
             </div> : 
             <div className="favourites-wrapper">
               <h1 className="favourites-title">Favourites</h1>
-              <MovieList popularMovies={favourites} handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites} />
+                <MovieList  popularMovies={favourites} handleAddFavourites={AddFavouriteMovie} handleDeleteFavourites={deleteFavourites} />
             </div>
           }
       </div>
