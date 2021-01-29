@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { shortenPars } from '../utilities/CharacterLimit';
-import noPoster from '../images/poster-holder.jpg';
+import noPoster from '../images/no-poster-available.png';
 import FavouritesButton from './FavouritesButton'
 
 const MovieList = (props) => {
-    const FavouriteComponent = props.favouriteComponent;
+    //const FavouriteComponent = props.favouriteComponent;
     return (
         <div className="featured-movies">
             {props.popularMovies.map((movie, index) => (

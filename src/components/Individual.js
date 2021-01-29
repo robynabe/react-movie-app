@@ -4,6 +4,7 @@ import {  useParams } from 'react-router-dom';
 import FavouritesButton from './FavouritesButton';
 import Scroll from './ScrollTop';
 import deleteFavourites from './Home';
+import noImage from '../images/no-image-available.png';
 
 function Individual(props) {
     const API_KEY = '80b08b43125772f29e329b06bba72a9c';
@@ -86,7 +87,10 @@ return (
         {movie !== null &&
             <div class="movie-individual-container">
                 <div className="movie-poster-individual">
-                    <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
+                    {movie.backdrop_path !== null ?
+                        <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/> :
+                        <img className="single-movie-image" src={noImage}/>
+                    }
                     <h1 className="individual-movie-title">{movie.title}</h1>
                 </div>
                 <div className="movie-individual-wrapper">
