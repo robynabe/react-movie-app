@@ -7,11 +7,12 @@ footer {
   padding: 10px;
   height: 100px;
   flex-shrink: 1;
+  font-family: "Manrope", sans-serif;
 }
 
-.github-link{
-  &:hover{
-    color: #F9187C;
+.github-link {
+  &:hover {
+    color: #f9187c;
     text-shadow: 2px 2px 15px #fddae9;
   }
 }

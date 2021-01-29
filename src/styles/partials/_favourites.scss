@@ -2,42 +2,42 @@ h1 {
   color: white;
 }
 
-.no-favourites-container{
+.no-favourites-container {
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 20px;
   max-width: 800px;
   border-radius: 10px;
-  background-color:  black(75, 75, 75, 0.673);
-  box-shadow: 0px 0px 12px 0px #F9187C;
+  background-color: black(75, 75, 75, 0.673);
+  box-shadow: 0px 0px 12px 0px #f9187c;
   text-align: center;
   color: white;
+  font-family: "Manrope", sans-serif;
 
-  h1{
+  h1 {
     text-shadow: 2px 2px 15px #fddae9;
     text-align: center;
+    text-transform: uppercase;
   }
 }
 
-.favourites-wrapper{
-  
+.favourites-wrapper {
   text-align: center;
- 
 }
-.favourites-title{
+.favourites-title {
   text-shadow: 2px 2px 15px #fddae9;
 }
 
-
-.home-link{
+.home-link {
   font-style: italic;
-  &:hover{
-    color: #F9187C;
+  &:hover {
+    color: #f9187c;
     text-shadow: 2px 2px 15px #fddae9;
   }
 }
 
-.home-page-favourites-page-heart {
+.bi-heart,
+.bi-heart-fill {
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -46,12 +46,11 @@ h1 {
   right: 10px;
   bottom: 10px;
 
-  &:hover{
+  &:hover {
     transform: scale(1.6);
     transition: ease-in-out 200ms;
   }
 }
-
 
 @media (min-width: 400px) {
   // .movie-section {
@@ -59,10 +58,9 @@ h1 {
   //     max-width: 400px;
   // }
 
-  .no-favourite-container{
-    padding:0;
-    margin: 0 ;
+  .no-favourite-container {
+    padding: 0;
+    margin: 0;
     max-width: 50%;
-  
   }
 }

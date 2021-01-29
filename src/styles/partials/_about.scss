@@ -42,12 +42,14 @@
 
 .about-title {
   text-shadow: 2px 2px 15px #fddae9;
+  text-transform: uppercase;
 }
 .welcome-info {
   max-width: 800px;
   display: block;
   margin: 0 auto;
   color: #ffffff;
+  font-family: "Manrope", sans-serif;
 }
 .film-reel-icon {
   display: block;
@@ -71,14 +73,13 @@
 //   //<style>.cls-1{fill:url(#linear-gradient);}</style>
 // }
 
-.attribution{
+.attribution {
   color: rgba(255, 255, 255, 0.822);
   margin-right: 10px;
   font-style: italic;
-
 }
 
-.attribution-container{
+.attribution-container {
   display: flex;
   justify-content: center;
 }
