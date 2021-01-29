@@ -46,7 +46,7 @@ const deleteFavourites = (id) => {
 }
 
   return (
-    <main>
+    <main className="favourites-page-wrapper">
       <div className="vl-left"></div>
       <div className="vl-right"></div>
       <div className="no-favourites-wrapper">

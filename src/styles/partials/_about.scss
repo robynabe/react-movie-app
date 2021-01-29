@@ -9,7 +9,7 @@
 
 .about-container {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 20px;
   max-width: 800px;
   border-radius: 10px;
@@ -71,6 +71,7 @@
 .attribution-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 130px;
 }
 // tmdb image
 .movie-database-logo {

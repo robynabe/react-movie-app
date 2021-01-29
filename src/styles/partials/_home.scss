@@ -1,6 +1,7 @@
 // Main and Page title //
 main {
-  // z-index: -1;
+  //position: relative;
+  //z-index: -1;
   background-color: black;
   padding: 15px;
 }
@@ -40,6 +41,7 @@ main {
   max-width: 380px;
   height: 300px;
   color: white;
+  z-index: 3;
   font-family: "Manrope", sans-serif;
   h5 {
     font-size: 1.35em;
@@ -122,6 +124,7 @@ main {
   position: fixed;
   bottom: 50px;
   right: 20px;
+  z-index: 3;
 
   @media (min-width: 1200px) {
     right: 50px;
