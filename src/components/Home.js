@@ -21,7 +21,6 @@ function Home( { sort } ) {
     setPopularMovies(responseJson.results);
     }
 
-  // Request will get called only when the page loads
   useEffect(() => {
       getPopularMovieRequest();
       let movieFavourites = localStorage.getItem('favourites')
@@ -46,7 +45,6 @@ function Home( { sort } ) {
    }
 
    const deleteFavourites = (id) => {
-    //('remove favourites')
     const indexOfMovieToRemove = favourites.findIndex(movie => movie.id === id);
     //console.log(indexOfMovieToRemove)
     let tempArray = [...favourites];

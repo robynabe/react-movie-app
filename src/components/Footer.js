@@ -6,6 +6,7 @@ function Footer() {
     const year = new Date();
     return year.getFullYear();
   }
+  
   return (
     <footer>
       <p>For educational use only &copy; {getYear()}</p>

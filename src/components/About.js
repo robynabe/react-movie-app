@@ -24,9 +24,8 @@ function About() {
       </div>
       <aside className="attribution-container">
           <p className="attribution">This product uses the TMDb API, but it not endorsed or certified by TMDb.</p> 
-          {/* <MovieLogo className="movie-logo"/> */}
           <img className="movie-database-logo" src={`./images/blue_long_2-9665a76b1ae401a510ec1e0ca40ddcb3b0cfe45f1d51b77a308fea0845885648-(1).png`} /> :
-        </aside>
+      </aside>
       <Scroll />
     </main>
   );

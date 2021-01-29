@@ -5,7 +5,7 @@ import FavouritesButton from './FavouritesButton';
 import Scroll from './ScrollTop';
 import noImage from '../images/no-image-available.png';
 
-function Individual(props) {
+function Individual() {
     const API_KEY = '80b08b43125772f29e329b06bba72a9c';
 
     const { id } = useParams();
@@ -45,7 +45,7 @@ function Individual(props) {
     const deleteFavourites = (id) => {
         const favsFromStorage = getFavsFromStorage()
         const indexOfMovieToRemove = favsFromStorage.findIndex(movie => movie.id === id);
-        // Remove movie from favs array
+
         favsFromStorage.splice(indexOfMovieToRemove, 1);
         saveToLocalStorage(favsFromStorage);
     }

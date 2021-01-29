@@ -16,7 +16,7 @@ function Header() {
           <Nav />
         </div>
       </div>
-      </header>
+    </header>
   );
 }
 

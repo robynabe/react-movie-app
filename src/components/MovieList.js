@@ -5,7 +5,7 @@ import noPoster from '../images/no-poster-available.png';
 import FavouritesButton from './FavouritesButton'
 
 const MovieList = (props) => {
-    //const FavouriteComponent = props.favouriteComponent;
+
     return (
         <div className="featured-movies">
             {props.popularMovies.map((movie, index) => (

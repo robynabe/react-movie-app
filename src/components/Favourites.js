@@ -16,13 +16,6 @@ function Favourites() {
 
   const [favourites, setFavourites] = useState(favsFromStorage);
 
-    // useEffect(() => {
-    //   const movieFavourites = JSON.parse(
-    //   localStorage.getItem('favourites')
-    // );
-    //   setFavourites(movieFavourites);
-    // }, []);
-
     const saveToLocalStorage = (items) => {
       localStorage.setItem('favourites', JSON.stringify(items))
     }
